@@ -1,8 +1,10 @@
-# deep-learning-book
+# Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
 
-Repository for "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python"
+Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python,"
 
-- code examples and chapter drafts as Jupyter Notebooks will follow ...
+This repository will contain the instructions, code examples, and solutions for the *Lab* and *Exercise* portions of each chapter.
+
+PDF and ebook versions of the book will be available from [LeanPub](which will be made available via [LeanPub](https://leanpub.com/ann-and-deeplearning).
 
 [![Deep Learning Book](images/ann-and-deeplearning-cover.jpg)](https://leanpub.com/ann-and-deeplearning)
 
