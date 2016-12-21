@@ -1,14 +1,18 @@
 # Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
 
-Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python,"
+Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python."
 
-This repository will contain the instructions, code examples, and solutions for the *Lab* and *Exercise* portions of each chapter.
+**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in "Python Machine Learning" and implement deep learning algorithms in TensorFow.**
 
-PDF and ebook versions of the book will be available from [LeanPub](https://leanpub.com/ann-and-deeplearning).
+- This repository will contain the instructions, code examples, and solutions for the *Hands-On* and *Exercise* portions of each chapter.
+
+- PDF and ebook versions of the book will be available from [Leanpub](https://leanpub.com/ann-and-deeplearning).
 
 [![Deep Learning Book](images/ann-and-deeplearning-cover.jpg)](https://leanpub.com/ann-and-deeplearning)
 
-**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in "Python Machine Learning" and implement deep learning algorithms in TensorFow.**
+
+
+## About the Book
 
 Machine learning has become a central part of our life — as consumers, customers, and hopefully as researchers and practitioners! I appreciate all the nice feedback that you sent me about "Python Machine Learning," and I am so happy to hear that you found it so useful as a learning guide, helping you with your business applications and research projects. I have received many emails since its release. Also, in these very emails, you were asking me about a possible prequel or sequel.
 
