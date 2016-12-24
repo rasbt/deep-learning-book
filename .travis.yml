@@ -8,7 +8,7 @@ env:
   - PYTHON_VERSION=3.5
   - PYTHON_VERSION=3.6
 script:
-  - bash ./scripts/test.sh $TESTCMD
+  - bash ./scripts/test.sh
 
 after_success:
     - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
