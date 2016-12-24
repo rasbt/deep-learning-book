@@ -4,12 +4,9 @@ install:
   - bash ./ci/install_travis_env.sh
 
 env:
-  - PYTHON_VERSION=2.7 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 -e test_examples -e test_distributions"
-  - PYTHON_VERSION=2.7 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 pymc3.tests.test_distributions pymc3.tests.test_examples"
-  - PYTHON_VERSION=2.7 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 pymc3.tests.test_distributions_random"
-  - PYTHON_VERSION=3.5 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 -e test_examples -e test_distributions"
-  - PYTHON_VERSION=3.5 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 pymc3.tests.test_distributions pymc3.tests.test_examples"
-  - PYTHON_VERSION=3.5 TESTCMD=" -vv --with-timer --with-coverage --cover-package=pymc3 pymc3.tests.test_distributions_random"
+  - PYTHON_VERSION=2.7
+  - PYTHON_VERSION=3.5
+  - PYTHON_VERSION=3.6
 script:
   - bash ./scripts/test.sh $TESTCMD
 
