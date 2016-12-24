@@ -1,0 +1,20 @@
+language: python
+
+install:
+  - bash ./ci/install_travis_env.sh
+
+env:
+  - PYTHON_VERSION=2.7
+  - PYTHON_VERSION=3.5
+  - PYTHON_VERSION=3.6
+script:
+  - bash ./scripts/test.sh $TESTCMD
+
+after_success:
+    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
+notifications:
+    email:
+      recipients:
+          - mail@sebastianraschka.com
+    on_success: always
+    on_failure: always
