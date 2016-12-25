@@ -9,7 +9,7 @@ env:
   - PYTHON_VERSION=3.6 LATEST=true
   - PYTHON_VERSION=3.6 NUMPY=1.10
 script:
-  - bash ./scripts/run_travis_tests.sh
+  - bash ./ci/run_travis_tests.sh
 
 after_success:
     - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
