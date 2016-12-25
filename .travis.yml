@@ -4,11 +4,12 @@ install:
   - bash ./ci/install_travis_env.sh
 
 env:
-  - PYTHON_VERSION=2.7
-  - PYTHON_VERSION=3.5
-  - PYTHON_VERSION=3.6
+  - PYTHON_VERSION=2.7 LATEST=true
+  - PYTHON_VERSION=3.5 LATEST=true
+  - PYTHON_VERSION=3.6 LATEST=true
+  - PYTHON_VERSION=3.6 NUMPY_VERSION="1.10"
 script:
-  - bash ./scripts/test.sh $TESTCMD
+  - bash ./ci/run_travis_tests.sh
 
 after_success:
     - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi

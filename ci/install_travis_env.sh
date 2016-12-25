@@ -4,21 +4,20 @@
 
 set -e
 
-PYTHON_VERSION=${PYTHON_VERSION}
 
 DOWNLOAD_PATH="miniconda.sh"
 
 if [ ${PYTHON_VERSION} == "2.7" ]; then
-  wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O ${DOWNLOAD_PATH}
+  wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ${DOWNLOAD_PATH}
   INSTALL_FOLDER="$HOME/miniconda2"
 else
-  wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh-x86_64.sh -O ${DOWNLOAD_PATH}
+  wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ${DOWNLOAD_PATH}
   INSTALL_FOLDER="$HOME/miniconda3"
 fi
 
 
-echo "Installing miniconda for python $PYTHON_VERSION to $INSTALL_FOLDER"
-bash ${DOWNLOAD_PATH} -b -p $INSTALL_FOLDER
+echo "Installing miniconda for python ${PYTHON_VERSION} to ${INSTALL_FOLDER}"
+bash ${DOWNLOAD_PATH} -b -p ${INSTALL_FOLDER}
 
 rm ${DOWNLOAD_PATH}
 
@@ -32,19 +31,24 @@ conda info -a
 # Setting up the Test Environment
 
 
-conda create -n testenv --yes pip python=${PYTHON_VERSION}
+conda create -n testenv --yes pip python=$PYTHON_VERSION
 source activate testenv
 
 echo "Setting up the test environment for python $PYTHON_VERSION"
 
-conda install --yes numpy nose
+if [${LATEST} = "true"]; then
+    conda install --yes -q numpy nose
+else
+    conda install --yes -q numpy=1.11 nose
+fi
+
 
 python --version
 python -c "import numpy; print('numpy %s' % numpy.__version__)"
 
 pip install --upgrade pip
 
-if [ "${COVERAGE}" = "true" ]; then
+if [${COVERAGE} = "true" ]; then
     pip install coveralls
 fi
 
