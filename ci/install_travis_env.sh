@@ -54,4 +54,4 @@ fi
 
 python setup.py install
 
-echo $NUMPY_VERSION
+echo $NUMPY_VERSION "<- show numpy ver"
