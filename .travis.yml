@@ -1,14 +1,13 @@
 language: python
 
-install:
-  - bash ./ci/install_travis_env.sh
-
 env:
   matrix:
     - PYTHON_VERSION="2.7" LATEST="true"
     - PYTHON_VERSION="3.5" LATEST="true"
     - PYTHON_VERSION="3.6" LATEST="true"
     - PYTHON_VERSION="3.6" NUMPY_VERSION="1.11"
+install:
+  - bash ./ci/install_travis_env.sh
 script:
   - bash ./ci/run_travis_tests.sh
 
