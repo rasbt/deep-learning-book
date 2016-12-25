@@ -22,9 +22,9 @@ conda info -a
 # Setting up the Test Environment
 
 if ["${LATEST}" = "true"]; then
-    conda create -q -n testenv --yes -python=$PYTHON_VERSION numpy;
+    conda create -q -n testenv --yes python=$PYTHON_VERSION numpy;
 else
-    conda create -q -n testenv --yes -python=$PYTHON_VERSION numpy=$NUMPY_VERSION;
+    conda create -q -n testenv --yes python=$PYTHON_VERSION numpy=$NUMPY_VERSION;
 fi
 
 source activate testenv
