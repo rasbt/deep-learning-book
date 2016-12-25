@@ -15,10 +15,10 @@ export PATH="$HOME/miniconda/bin:$PATH";
 
 # Setting up the Test Environment
 
-if ["${LATEST}" = "true"]; then
+if [ "${LATEST}" = "true" ]; then
     create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
 else
-    create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
+    create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION;
 fi
 
 source activate testenv
