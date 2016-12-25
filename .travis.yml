@@ -1,11 +1,16 @@
 language: python
 
 matrix:
-  include:
-    - PYTHON_VERSION="2.7" LATEST="true"
-    - PYTHON_VERSION="3.5" LATEST="true"
-    - PYTHON_VERSION="3.6" LATEST="true"
-    - PYTHON_VERSION="3.6" NUMPY_VERSION="1.11"
+    include:
+        - python: 2.7
+          env: LATEST="true"
+        - python: 3.5
+          env: LATEST="true"
+        - python: 3.6
+          env: LATEST="true"
+        - python: 3.6
+          env: NUMPY_VERSION="1.11"
+
 install:
   - source ./ci/install_travis_env.sh
 script:
