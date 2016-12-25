@@ -12,9 +12,9 @@ matrix:
           env: NUMPY_VERSION="1.11"
 
 install:
-  - source ./ci/install_travis_env.sh
+  - source ci/install_travis_env.sh
 script:
-  - bash ./ci/run_travis_tests.sh
+  - bash ci/run_travis_tests.sh
 
 #after_success:
 #    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
