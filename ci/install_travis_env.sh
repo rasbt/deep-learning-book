@@ -17,8 +17,8 @@ else
 fi
 
 
-echo "Installing miniconda for python $PYTHON_VERSION to $INSTALL_FOLDER"
-bash ${DOWNLOAD_PATH} -b -p $INSTALL_FOLDER
+echo "Installing miniconda for python ${PYTHON_VERSION} to ${INSTALL_FOLDER}"
+bash ${DOWNLOAD_PATH} -b -p ${INSTALL_FOLDER}
 
 rm ${DOWNLOAD_PATH}
 
@@ -32,7 +32,7 @@ conda info -a
 # Setting up the Test Environment
 
 
-conda create -n testenv --yes pip python=${PYTHON_VERSION}
+conda create -n testenv --yes pip python=$PYTHON_VERSION
 source activate testenv
 
 echo "Setting up the test environment for python $PYTHON_VERSION"
@@ -40,7 +40,7 @@ echo "Setting up the test environment for python $PYTHON_VERSION"
 if ["${LATEST}" = "true"]; then
     conda install --yes -q numpy nose
 else
-    conda install --yes -q numpy=1.11 nose
+    conda install --yes -q numpy=${NUMPY_VERSION} nose
 fi
 
 
