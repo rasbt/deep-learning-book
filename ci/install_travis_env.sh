@@ -13,16 +13,11 @@ fi
 
 bash miniconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
-hash -r
-conda config --set always_yes yes --set changeps1 no
-conda update -q conda
-conda info -a
-
 
 # Setting up the Test Environment
 
 
-conda create -q -n testenv --yes python=$PYTHON_VERSION numpy;
+conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
 
 
 source activate testenv
