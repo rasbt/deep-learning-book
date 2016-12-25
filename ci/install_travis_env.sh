@@ -32,7 +32,7 @@ conda info -a
 if ["${LATEST}" = "true"]; then
     create -q -n testenv --yes -python="$PYTHON_VERSION" numpy
 else
-    create -q -n testenv --yes python="$PYTHON_VERSION" numpy=$NUMPY_VERSION
+    create -q -n testenv --yes -python="$PYTHON_VERSION" numpy=$NUMPY_VERSION
 fi
 
 conda create -n testenv --yes pip python="$PYTHON_VERSION"
