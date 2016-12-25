@@ -10,9 +10,9 @@ matrix:
         - python: 3.6
           env: NUMPY_VERSION="1.11"
 install:
-    - bash ci/install_travis_env.sh
+    - bash .travis/install_travis_env.sh
 script:
-    - bash ci/run_travis_tests.sh
+    - bash .travis/run_travis_tests.sh
 notifications:
     email:
         recipients:

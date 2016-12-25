@@ -16,13 +16,15 @@ export PATH="$HOME/miniconda/bin:$PATH"
 
 # Setting up the Test Environment
 
-
-conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
-
+if ["${LATEST}" = "true"]; then
+    create -q -n testenv --yes -python=$TRAVIS_PYTHON_VERSION numpy
+else
+    create -q -n testenv --yes -python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION
+fi
 
 source activate testenv
 
-conda install pip nose
+conda install -q -y pip nose
 
 python --version
 python -c "import numpy; print('numpy %s' % numpy.__version__)"
