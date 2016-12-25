@@ -40,7 +40,7 @@ echo "Setting up the test environment for python $PYTHON_VERSION"
 if ["${LATEST}" = "true"]; then
     conda install --yes -q numpy nose
 else
-    conda install --yes -q numpy=${NUMPY_VERSION} nose
+    conda install --yes -q numpy=1.10 nose
 fi
 
 
