@@ -1,3 +1,10 @@
+deep-learning-book
+
+[![Build Status](https://travis-ci.org/rasbt/deep-learning-book.svg?branch=master)](https://travis-ci.org/rasbt/deep-learning-book)
+![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)
+![Python 3.5](https://img.shields.io/badge/python-3.5-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 # Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
 
 Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python."
