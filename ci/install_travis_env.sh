@@ -4,24 +4,16 @@
 
 set -e
 
-
-DOWNLOAD_PATH="miniconda.sh"
-
 if [ "${PYTHON_VERSION}" == "2.7" ]; then
-  wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ${DOWNLOAD_PATH}
-  INSTALL_FOLDER="$HOME/miniconda2"
+  wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
 else
-  wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ${DOWNLOAD_PATH}
-  INSTALL_FOLDER="$HOME/miniconda3"
+  wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
 fi
 
 
-bash ${DOWNLOAD_PATH} -b -p ${INSTALL_FOLDER}
-
-rm ${DOWNLOAD_PATH}
-
-export PATH="$INSTALL_FOLDER/bin:$PATH"
-
+bash miniconda.sh -b -p $HOME/miniconda
+export PATH="$HOME/miniconda/bin:$PATH"
+hash -r
 conda config --set always_yes yes --set changeps1 no
 conda update -q conda
 conda info -a
