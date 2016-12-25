@@ -4,7 +4,6 @@
 
 set -e
 
-PYTHON_VERSION=${PYTHON_VERSION}
 
 DOWNLOAD_PATH="miniconda.sh"
 
@@ -37,7 +36,7 @@ source activate testenv
 
 echo "Setting up the test environment for python $PYTHON_VERSION"
 
-if ["${LATEST}" = "true"]; then
+if [${LATEST} = "true"]; then
     conda install --yes -q numpy nose
 else
     conda install --yes -q numpy=${NUMPY_VERSION} nose
@@ -49,7 +48,7 @@ python -c "import numpy; print('numpy %s' % numpy.__version__)"
 
 pip install --upgrade pip
 
-if [ "${COVERAGE}" = "true" ]; then
+if [${COVERAGE} = "true" ]; then
     pip install coveralls
 fi
 
