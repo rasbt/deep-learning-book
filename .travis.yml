@@ -1,18 +1,18 @@
 language: python
 
-install:
-  - bash ./ci/install_travis_env.sh
-
 env:
-  - PYTHON_VERSION=2.7 LATEST=true
-  - PYTHON_VERSION=3.5 LATEST=true
-  - PYTHON_VERSION=3.6 LATEST=true
-  - PYTHON_VERSION=3.6 NUMPY_VERSION="1.11"
+  matrix:
+    - PYTHON_VERSION="2.7" LATEST="true"
+    - PYTHON_VERSION="3.5" LATEST="true"
+    - PYTHON_VERSION="3.6" LATEST="true"
+    - PYTHON_VERSION="3.6" NUMPY_VERSION="1.11"
+install:
+  - source ./ci/install_travis_env.sh
 script:
   - bash ./ci/run_travis_tests.sh
 
-after_success:
-    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
+#after_success:
+#    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
 notifications:
     email:
       recipients:
