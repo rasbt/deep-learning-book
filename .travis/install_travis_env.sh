@@ -10,15 +10,16 @@ else
   wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
 fi
 
+
 bash miniconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
 
 # Setting up the Test Environment
 
-if [ "${LATEST}" = "true"]; then
-    create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy
+if [ "${LATEST}" = "true" ]; then
+  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy
 else
-    create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION
+  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION
 fi
 
 source activate testenv
@@ -30,7 +31,7 @@ python -c "import numpy; print('numpy %s' % numpy.__version__)"
 
 pip install --upgrade pip
 
-if ["${COVERAGE}" = "true" ]; then
+if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 

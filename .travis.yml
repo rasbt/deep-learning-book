@@ -1,5 +1,4 @@
 language: python
-
 matrix:
     include:
         - python: 2.7
@@ -9,18 +8,16 @@ matrix:
         - python: 3.6
           env: LATEST="true"
         - python: 3.6
-          env: NUMPY_VERSION="1.11"
-
+          env: LATEST="false" NUMPY_VERSION="1.11"
 install:
-  - source ci/install_travis_env.sh
+    - bash .travis/install_travis_env.sh
 script:
-  - bash ci/run_travis_tests.sh
-
+    - bash .travis/run_travis_tests.sh
 #after_success:
 #    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
 notifications:
     email:
-      recipients:
-          - mail@sebastianraschka.com
+        recipients:
+            - mail@sebastianraschka.com
     on_success: always
     on_failure: always
