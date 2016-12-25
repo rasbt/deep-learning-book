@@ -2,7 +2,7 @@
 ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)
 ![Python 3.5](https://img.shields.io/badge/python-3.5-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-[![Mailing List](https://groups.google.com/forum/#!forum/ann-and-dl-book)
+[![Mailing List](https://img.shields.io/badge/-Google%20Group-lightgrey.svg)](https://groups.google.com/forum/#!forum/ann-and-dl-book)
 
 # Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
 
