@@ -8,7 +8,7 @@ matrix:
         - python: 3.6
           env: LATEST="true"
         - python: 3.6
-          env: NUMPY_VERSION="1.11"
+          env: LATEST="false" NUMPY_VERSION="1.11"
 install:
     - bash .travis/install_travis_env.sh
 script:
