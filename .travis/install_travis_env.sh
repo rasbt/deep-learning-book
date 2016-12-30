@@ -13,6 +13,11 @@ fi
 
 bash miniconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
+hash -r
+conda config --set always_yes yes --set changeps1 no
+conda update -q conda
+conda info -a
+
 
 # Setting up the Test Environment
 
@@ -35,10 +40,11 @@ if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 
-
-conda install -q -y jupyter matplotlib
-pip install watermark
-pip install nbformat
+if [ "${NOTEBOOKS}" = "true" ]; then
+    conda install -q -y jupyter matplotlib
+    pip install watermark
+    pip install nbformat
+fi
 
 
 python setup.py install
