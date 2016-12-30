@@ -28,5 +28,5 @@ def test_appendix_g_tensorflow_basics():
     this_dir = os.path.dirname(os.path.abspath(__file__))
 
     ipynb, errors = run_ipynb(os.path.join(this_dir,
-                              'code/appendix_g_tensorflow-basics.ipynb'))
+                              'appendix_g_tensorflow-basics.ipynb'))
     assert errors == []
