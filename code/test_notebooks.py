@@ -14,6 +14,8 @@ def run_ipynb(path):
         print(" ".join(args))
         subprocess.check_call(args)
         fout.seek(0)
+
+        # 'byte' vs str issues when running the following in Py 3.5
         nb = nbformat.read(fout, nbformat.current_nbformat)
 
     for cell in nb.cells:
