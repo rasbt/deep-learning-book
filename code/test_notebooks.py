@@ -8,7 +8,8 @@ import nbformat
 def run_ipynb(path):
     error_cells = []
     with tempfile.NamedTemporaryFile(suffix=".ipynb") as fout:
-        args = ["python", "-m", "nbconvert", "--to", "notebook", "--execute", "--output",
+        args = ["python", "-m", "nbconvert", "--to",
+                "notebook", "--execute", "--output",
                 fout.name, path]
         print(" ".join(args))
         subprocess.check_call(args)
@@ -22,6 +23,10 @@ def run_ipynb(path):
 
     return nb, errors
 
+
 def test_appendix_g_tensorflow_basics():
-    ipynb, errors = run_ipynb('../code/appendix_g_tensorflow-basics.ipynb')
+    this_dir = os.path.dirname(os.path.abspath(__file__))
+
+    ipynb, errors = run_ipynb(os.path.join(this_dir,
+                              'code/appendix_g_tensorflow-basics.ipynb'))
     assert errors == []
