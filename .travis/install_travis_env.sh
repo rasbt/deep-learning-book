@@ -37,7 +37,7 @@ fi
 
 if [ "${NOTEBOOKS}" = "true" ]; then
     conda install -q -y jupyter matplotlib
-    pip install nbformat 
+    pip install -U nbformat 
 fi
 
 
