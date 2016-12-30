@@ -5,5 +5,5 @@ set -e
 nosetests ann
 
 if [[ "$NOTEBOOKS" == "true" ]]; then
-    find sources -name "*.ipynb" -exec jupyter nbconvert --to notebook --execute {} \;
+    find code -name "*.ipynb" -exec jupyter nbconvert --to notebook --execute {} \;
 fi
