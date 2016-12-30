@@ -35,11 +35,10 @@ if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 
-if [ "${NOTEBOOKS}" = "true" ]; then
-    conda install -q -y jupyter matplotlib
-    pip install watermark
-    pip install nbformat
-fi
+
+conda install -q -y jupyter matplotlib
+pip install watermark
+pip install nbformat
 
 
 python setup.py install
