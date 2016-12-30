@@ -31,3 +31,49 @@ In this book, I want to continue where I left off and want to implement deep neu
 ISBN-10: [TBA]  
 ISBN-13: [TBA]  
 Paperback: est. Q4 2017  
+
+## Manuscripts/Early Access
+
+- Introduction
+
+- The Perceptron and Classification
+
+- Optimizing Cost Functions with Gradient Descent
+
+- Logistic Regression and Softmax Regression
+
+- From Softmax Regression to Multi-layer Perceptrons
+
+- Cross Validation and Performance Metrics
+
+- Regularization in Neural Networks
+
+- Learning Rates and Weight Initialization
+
+- Convolutional Neural Networks
+
+- Recurrent Neural Networks
+
+- Echostate Networks
+
+- Autoencoders
+
+- General Adverserial Neural Networks
+
+- Deep Generative Models
+
+- Reinforcement Learning
+
+- Appendix A: Mathematical Notation
+
+- Appendix B: Algebra Basics
+
+- Appendix C: Linear Algebra Essentials
+
+- Appendix D: Calculus and Differentiation Primer
+
+- Appendix E: Python Setup
+
+- Appendix F: NumPy Overview
+
+- Appendix G: TensorFlow Basics
