@@ -12,6 +12,7 @@ matrix:
         - python: 3.5
           env: LATEST="true" NOTEBOOKS="true"
 install:
+    - sudo apt-get update
     - source .travis/install_travis_env.sh
 script:
     - bash .travis/run_travis_tests.sh
