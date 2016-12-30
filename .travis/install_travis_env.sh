@@ -35,9 +35,9 @@ if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 
-if [ "${NOTEBOOKS}" = "true" ]; then
-    conda install -q -y jupyter matplotlib nbformat;
-fi
+
+conda install -q -y jupyter matplotlib nbformat;
+
 
 
 python setup.py install
