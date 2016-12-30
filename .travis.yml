@@ -8,7 +8,7 @@ matrix:
         - python: 3.6
           env: LATEST="true" NOTEBOOKS="false"
         - python: 3.6
-          env: LATEST="false" NUMPY_VERSION="1.11" NOTEBOOKS="false"
+          env: LATEST="false" NUMPY_VERSION="1.11" TENSORFLOW_VERSION="0.12" NOTEBOOKS="false"
         - python: 3.5
           env: LATEST="true" NOTEBOOKS="true"
 install:

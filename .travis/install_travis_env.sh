@@ -22,9 +22,11 @@ conda info -a
 # Setting up the Test Environment
 
 if [ "${LATEST}" = "true" ]; then
-  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy
+  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
+  conda install -c conda-forge tensorflow;
 else
-  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION
+  conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION;
+  conda install -c conda-forge tensorflow=$TENSORFLOW_VERSION
 fi
 
 source activate testenv
