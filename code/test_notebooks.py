@@ -1,7 +1,8 @@
 import os
 import subprocess
 import tempfile
-import jupyter_nbformat
+import watermark
+import nbformat
 
 
 def run_ipynb(path):
