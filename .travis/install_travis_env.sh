@@ -36,7 +36,7 @@ if [ "${COVERAGE}" = "true" ]; then
 fi
 
 if [ "${NOTEBOOKS}" = "true" ]; then
-    conda install -q -y jupyter matplotlib
+    conda install -q -y jupyter matplotlib nbformat
   fi
 
 
