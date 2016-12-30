@@ -35,4 +35,9 @@ if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 
+if [ "${NOTEBOOKS}" = "true" ]; then
+    conda install jupyter matplotlib
+  fi
+
+
 python setup.py install
