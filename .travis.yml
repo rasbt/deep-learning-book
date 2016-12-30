@@ -11,7 +11,7 @@ matrix:
           env: LATEST="true" NOTEBOOKS="false"
         - python: 3.6
           env: LATEST="false" NUMPY_VERSION="1.11" NOTEBOOKS="false"
-        - python: 2.7
+        - python: 3.5
           env: LATEST="true" NOTEBOOKS="true"
 install:
     - sudo apt-get update
