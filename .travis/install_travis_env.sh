@@ -45,10 +45,15 @@ if [ "${NOTEBOOKS}" = "true" ]; then
     pip install watermark;
     pip install nbformat;
 
+    # temporary pip install until 0.12 is released on conda
+    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp35-cp35m-linux_x86_64.whl
     if [ "${LATEST}" = "true" ]; then
-      conda install tensorflow;
+      # conda install tensorflow;
+      pip install --ignore-installed --upgrade $TF_BINARY_URL
     else
-      conda install -q -y tensorflow=$TENSORFLOW_VERSION;
+      # conda install -q -y tensorflow=$TENSORFLOW_VERSION;
+      pip install --ignore-installed --upgrade $TF_BINARY_URL
+
     fi
 fi
 
