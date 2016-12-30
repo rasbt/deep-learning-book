@@ -2,6 +2,8 @@
 
 set -e
 
+source activate testenv
+
 nosetests ann
 
 if [[ "$NOTEBOOKS" == "true" ]]; then
