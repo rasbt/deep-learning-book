@@ -36,7 +36,7 @@ Paperback: est. Q4 2017
 
 - Introduction
 
-- The Perceptron and Classification
+- The Perceptron
 
 - Optimizing Cost Functions with Gradient Descent
 
@@ -76,4 +76,4 @@ Paperback: est. Q4 2017
 
 - Appendix F: NumPy Overview
 
-- Appendix G: TensorFlow Basics
+- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_tensorflow.pdf)]
