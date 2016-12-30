@@ -23,5 +23,5 @@ def run_ipynb(path):
     return nb, errors
 
 def test_appendix_g_tensorflow_basics():
-    ipynb, errors = run_ipynb('/code/appendix_g_tensorflow-basics.ipynb')
+    ipynb, errors = run_ipynb('../code/appendix_g_tensorflow-basics.ipynb')
     assert errors == []
