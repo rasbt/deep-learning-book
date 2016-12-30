@@ -18,4 +18,4 @@ def test_appendix_g_tensorflow_basics():
     this_dir = os.path.dirname(os.path.abspath(__file__))
 
     run_ipynb(os.path.join(this_dir,
-                           'appendix_g_tensorflow-basics.ipynb'))
+                           '../appendix_g_tensorflow-basics.ipynb'))
