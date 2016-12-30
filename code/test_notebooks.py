@@ -1,7 +1,7 @@
 import os
 import subprocess
 import tempfile
-import nbformat
+import jupyter_nbformat
 
 
 def run_ipynb(path):
@@ -12,7 +12,7 @@ def run_ipynb(path):
         print(" ".join(args))
         subprocess.check_call(args)
         fout.seek(1)
-        nb = nbformat.read(fout, nbformat.current_nbformat)
+        nb = jupyter_nbformat.read(fout, jupyter_nbformat.current_nbformat)
 
     for cell in nb.cells:
         for output in cell["outputs"]:
