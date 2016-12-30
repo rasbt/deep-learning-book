@@ -46,9 +46,9 @@ if [ "${NOTEBOOKS}" = "true" ]; then
     pip install nbformat;
 
     if [ "${LATEST}" = "true" ]; then
-      conda install -c conda-forge tensorflow;
+      conda install tensorflow;
     else
-      conda install -q -y -c conda-forge tensorflow=$TENSORFLOW_VERSION;
+      conda install -q -y tensorflow=$TENSORFLOW_VERSION;
     fi
 fi
 
