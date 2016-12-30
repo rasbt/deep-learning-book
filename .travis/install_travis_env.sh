@@ -23,10 +23,8 @@ conda info -a
 
 if [ "${LATEST}" = "true" ]; then
   conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy;
-  conda install -c conda-forge tensorflow;
 else
   conda create -q -n testenv --yes python=$TRAVIS_PYTHON_VERSION numpy=$NUMPY_VERSION;
-  conda install -c conda-forge tensorflow=$TENSORFLOW_VERSION
 fi
 
 source activate testenv
@@ -46,6 +44,12 @@ if [ "${NOTEBOOKS}" = "true" ]; then
     conda install -q -y jupyter matplotlib;
     pip install watermark;
     pip install nbformat;
+
+    if [ "${LATEST}" = "true" ]; then
+      conda install -c conda-forge tensorflow;
+    else
+      conda install -q -y -c conda-forge tensorflow=$TENSORFLOW_VERSION;
+    fi
 fi
 
 
