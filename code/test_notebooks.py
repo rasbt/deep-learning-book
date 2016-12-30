@@ -13,7 +13,7 @@ def run_ipynb(path):
                 fout.name, path]
         print(" ".join(args))
         subprocess.check_call(args)
-        fout.seek(1)
+        fout.seek(0)
         nb = jupyter_nbformat.read(fout, jupyter_nbformat.current_nbformat)
 
     for cell in nb.cells:
