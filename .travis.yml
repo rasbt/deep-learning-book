@@ -12,7 +12,7 @@ matrix:
         - python: 3.5
           env: LATEST="true" NOTEBOOKS="true"
 install:
-    - bash .travis/install_travis_env.sh
+    - source .travis/install_travis_env.sh
 script:
     - bash .travis/run_travis_tests.sh
 #after_success:

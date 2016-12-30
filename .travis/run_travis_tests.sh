@@ -3,7 +3,7 @@
 set -e
 
 if [[ "$NOTEBOOKS" == "true" ]]; then
-    nosetests code
+    nosetests -s -v code
 else
-    nosetests ann
+    nosetests -s -v ann
 fi
