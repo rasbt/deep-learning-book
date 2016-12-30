@@ -9,7 +9,7 @@ matrix:
           env: LATEST="true" NOTEBOOKS="false"
         - python: 3.6
           env: LATEST="false" NUMPY_VERSION="1.11" NOTEBOOKS="false"
-        - python: 3.6
+        - python: 3.5
           env: LATEST="true" NUMPY_VERSION="1.11" NOTEBOOKS="true"
 install:
     - bash .travis/install_travis_env.sh
