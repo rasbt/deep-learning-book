@@ -32,7 +32,7 @@ ISBN-10: [TBA]
 ISBN-13: [TBA]  
 Paperback: est. Q4 2017  
 
-## Manuscripts/Early Access
+## Manuscripts / Early Access Drafts
 
 - Introduction
 
@@ -64,7 +64,7 @@ Paperback: est. Q4 2017
 
 - Reinforcement Learning
 
-- Appendix A: Mathematical Notation
+- Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_math_notation.pdf)]
 
 - Appendix B: Algebra Basics
 
