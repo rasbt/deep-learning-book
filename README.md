@@ -77,3 +77,5 @@ Paperback: est. Q4 2017
 - Appendix F: NumPy Overview
 
 - Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_tensorflow.pdf)]
+
+- Appendix H: Cloud Computing
