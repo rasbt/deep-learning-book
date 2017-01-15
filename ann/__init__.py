@@ -8,4 +8,9 @@
 #
 # License: MIT
 
+from .preprocessing import onehot
+
+
 __version__ = '0.1.0'
+
+__all__ = ['onehot']
