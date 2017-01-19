@@ -57,6 +57,48 @@ def onehot(ary, n_classes=None, dtype=None):
     return oh_ary
 
 
+def onehot_reverse(predictions, dtype=None):
+    """ Turns one-hot arrays or class probabilities back into class labels
+
+    Parameters
+    ----------
+    ary : NumPy array, shape=(n_samples, n_classes)
+        A 2D NumPy array in onehot format or class probabilities
+    dtype : NumPy dtype (default: None)
+        The NumPy dtype of the 1D NumPy array that is returned.
+        If dtype is `None` (default), a one-hot array, returns an int32 array
+
+    Returns
+    -------
+    array-like, shape=(n_classes)
+        Class label array
+
+    Examples
+    --------
+    >>> import numpy as np
+    >>> from ann.np import onehot_reverse
+    >>> a = np.array([[ 1.,  0.,  0.,  0.],\
+                      [ 0.,  1.,  0.,  0.],\
+                      [ 0.,  0.,  0.,  1.],\
+                      [ 0.,  0.,  0.,  1.]])
+    >>> onehot_reverse(a)
+    array([0, 1, 3, 3], dtype=int32)
+    >>> b = np.array([[0.66, 0.24, 0.10],\
+                      [0.66, 0.24, 0.10],\
+                      [0.66, 0.24, 0.10],\
+                      [0.24, 0.66, 0.10]])
+    >>> onehot_reverse(b)
+    array([0, 0, 0, 1], dtype=int32)
+    >>>
+    """
+    if dtype is None:
+        dtype = np.int32
+    if predictions.ndim != 2:
+        raise ValueError("Input array must have 2 dimensions\n"
+                         "Got predictions.ndim: %d" % predictions.ndim)
+    return np.argmax(predictions, axis=1).astype(dtype)
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
