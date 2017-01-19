@@ -38,13 +38,13 @@ def onehot(ary, n_classes=None, dtype=None):
     Examples
     --------
     >>> import numpy as np
-    >>> from ann import onehot
+    >>> from ann.np import onehot
     >>> oh_ary = onehot(ary=np.array([0, 1, 2, 3]))
     >>> oh_ary
     array([[ 1.,  0.,  0.,  0.],
-       [ 0.,  1.,  0.,  0.],
-       [ 0.,  0.,  1.,  0.],
-       [ 0.,  0.,  0.,  1.]], dtype=float32)
+           [ 0.,  1.,  0.,  0.],
+           [ 0.,  0.,  1.,  0.],
+           [ 0.,  0.,  0.,  1.]], dtype=float32)
     >>>
     """
 
@@ -54,3 +54,8 @@ def onehot(ary, n_classes=None, dtype=None):
         n_classes = np.max(ary) + 1
     oh_ary = (np.arange(n_classes) == ary[:, None]).astype(dtype)
     return oh_ary
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
