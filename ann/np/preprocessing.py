@@ -39,11 +39,12 @@ def onehot(ary, n_classes=None, dtype=None):
     --------
     >>> import numpy as np
     >>> from ann.np import onehot
-    >>> oh_ary = onehot(ary=np.array([0, 1, 2, 3]))
+    >>> oh_ary = onehot(ary=np.array([0, 1, 2, 3, 3]))
     >>> oh_ary
     array([[ 1.,  0.,  0.,  0.],
            [ 0.,  1.,  0.,  0.],
            [ 0.,  0.,  1.,  0.],
+           [ 0.,  0.,  0.,  1.],
            [ 0.,  0.,  0.,  1.]], dtype=float32)
     >>>
     """
