@@ -101,7 +101,7 @@ def accuracy_2d(predictions, targets):
 
     p_flat = np.argmax(predictions, axis=1)
     t_flat = np.argmax(targets, axis=1)
-    return np.sum(p_flat == t_flat) / predictions.shape[0]
+    return np.sum(p_flat == t_flat) / float(predictions.shape[0])
 
 
 if __name__ == '__main__':
