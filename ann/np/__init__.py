@@ -12,3 +12,4 @@
 
 from .preprocessing import onehot
 from .scoring import accuracy_1d
+from .scoring import accuracy_2d
