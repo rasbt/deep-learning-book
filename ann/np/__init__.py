@@ -11,3 +11,4 @@
 # License: MIT
 
 from .preprocessing import onehot
+from .scoring import accuracy_1d
