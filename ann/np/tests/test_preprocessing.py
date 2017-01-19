@@ -9,7 +9,7 @@
 # License: MIT
 
 import numpy as np
-from ann import onehot
+from ann.np import onehot
 
 
 def test_default():
