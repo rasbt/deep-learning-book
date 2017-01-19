@@ -8,7 +8,6 @@ setup(
     version=VERSION,
     packages=find_packages(),
     install_requires=['numpy>=1.10.4'],
-    extras_require={'testing': ['nose']},
     author="Sebastian Raschka",
     author_email="mail@sebastianraschka.com",
     description=("Supporting package for the book "

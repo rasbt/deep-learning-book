@@ -29,7 +29,7 @@ fi
 
 source activate testenv
 
-conda install -q -y pip nose
+conda install -q -y pip
 
 python --version
 python -c "import numpy; print('numpy %s' % numpy.__version__)"
