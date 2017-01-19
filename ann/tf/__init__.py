@@ -1,3 +1,5 @@
+""" Submodule containing TensorFlow functions
+"""
 # Sebastian Raschka 2016-2017
 #
 # ann is a supporting package for the book
@@ -7,5 +9,3 @@
 # Author: Sebastian Raschka <sebastianraschka.com>
 #
 # License: MIT
-
-__version__ = '0.1.0'
