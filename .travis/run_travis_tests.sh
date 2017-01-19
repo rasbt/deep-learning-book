@@ -3,7 +3,7 @@
 set -e
 
 if [[ "$NOTEBOOKS" == "true" ]]; then
-    nosetests -s -v code
+    python -m unittest discover code -v
 else
-    nosetests -s -v ann
+    python -m unittest discover ann -v
 fi
