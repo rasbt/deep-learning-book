@@ -99,6 +99,79 @@ def onehot_reverse(predictions, dtype=None):
     return np.argmax(predictions, axis=1).astype(dtype)
 
 
+def square_padding(ary, n_elements, axes=(0, 1), value=0):
+    """ Pad one or multiple arrays into square form.
+
+    Parameters
+    ----------
+    ary : NumPy array, shape >= 2
+        Input array consisting of 2 or more dimensions
+    n_elements : int
+        The number of elements in both the length and widths of the arrays
+    axes : (x, y)
+        The index of the x and y dimensions of the array(s) that to be padded
+    value : int or float
+        The value that is used to pad the array(s)
+
+    Examples
+    --------
+    >>> ###################################
+    >>> # pad a single 3x3 array to 5x5
+    >>> ###################################
+    >>> t = np.array([[1., 2., 3.],\
+                      [4., 5., 6.],\
+                      [7., 8., 9.]])
+    >>> square_padding(ary=t, n_elements=5, axes=(0, 1))
+    array([[ 0.,  0.,  0.,  0.,  0.],
+           [ 0.,  1.,  2.,  3.,  0.],
+           [ 0.,  4.,  5.,  6.,  0.],
+           [ 0.,  7.,  8.,  9.,  0.],
+           [ 0.,  0.,  0.,  0.,  0.]])
+    >>> ###################################
+    >>> # pad two 3x3 arrays to two 5x5
+    >>> ###################################
+    >>> t = np.array([[[1., 2., 3.],\
+                       [4., 5., 6.],\
+                       [7., 8., 9.]],\
+                      [[10., 11., 12.],\
+                       [13., 5., 6.],\
+                       [7., 8., 9.]]])
+    >>> square_padding(ary=t, n_elements=5, axes=(1, 2), value=0)
+    array([[[  0.,   0.,   0.,   0.,   0.],
+            [  0.,   1.,   2.,   3.,   0.],
+            [  0.,   4.,   5.,   6.,   0.],
+            [  0.,   7.,   8.,   9.,   0.],
+            [  0.,   0.,   0.,   0.,   0.]],
+    <BLANKLINE>
+           [[  0.,   0.,   0.,   0.,   0.],
+            [  0.,  10.,  11.,  12.,   0.],
+            [  0.,  13.,   5.,   6.,   0.],
+            [  0.,   7.,   8.,   9.,   0.],
+            [  0.,   0.,   0.,   0.,   0.]]])
+    """
+
+    assert len(axes) == 2
+
+    x_padding = n_elements - ary.shape[axes[0]]
+    x_right = x_padding // 2
+    x_left = x_right + (x_padding % 2)
+
+    y_padding = n_elements - ary.shape[axes[1]]
+    y_bottom = y_padding // 2
+    y_top = y_bottom + (y_padding % 2)
+
+    npad = [[0, 0] for _ in range(ary.ndim)]
+    npad[axes[0]] = [x_left, x_right]
+    npad[axes[1]] = [y_top, y_bottom]
+
+    padded = np.lib.pad(array=ary,
+                        pad_width=npad,
+                        mode='constant',
+                        constant_values=value)
+
+    return padded
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
