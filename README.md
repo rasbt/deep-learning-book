@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/rasbt/deep-learning-book.svg?branch=master)](https://travis-ci.org/rasbt/deep-learning-book)
 ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)
-![Python 3.5](https://img.shields.io/badge/python-3.6-blue.svg)
+![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-0.1-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Mailing List](https://img.shields.io/badge/-Mailing%20List-lightgrey.svg)](https://groups.google.com/forum/#!forum/ann-and-dl-book)
 
@@ -8,7 +9,7 @@
 
 Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python."
 
-**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in "Python Machine Learning" and implement deep learning algorithms in TensorFlow.**
+**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in "Python Machine Learning" and implement deep learning algorithms in [PyTorch](http://pytorch.org).**
 
 - This repository will contain the instructions, code examples, and solutions for the *Hands-On* and *Exercise* portions of each chapter.
 
@@ -26,7 +27,7 @@ Initially, I was inclined to write more about the "math" parts, which can be a r
 
 So, instead of writing that "prequel," let me write about something that's built upon the concepts that I introduced in the later chapters of "Python Machine Learning" -- algorithms for deep learning. After we coded a multi-layer perceptron (a certain kind of feedforward artificial neural network) from scratch, we took a brief look at some Python libraries for implementing deep learning algorithms, and I introduced convolutional and recurrent neural networks on a conceptual level.
 
-In this book, I want to continue where I left off and want to implement deep neural networks and algorithms for deep learning algorithms from scratch, using Python, NumPy, and SciPy throughout this educational journey. In addition to the vanilla Python science-stack, we will implement these algorithms in TensorFlow, Google's open source and cutting-edge deep learning library for implementing and applying deep learning to real-world problems efficiently.
+In this book, I want to continue where I left off and want to implement deep neural networks and algorithms for deep learning algorithms from scratch, using Python, NumPy, and SciPy throughout this educational journey. In addition to the vanilla Python science-stack, we will implement these algorithms in [PyTorch](http://pytorch.org), highly performant yet very accessible deep learning library for implementing and applying deep learning to real-world problems.
 
 ISBN-10: [TBA]  
 ISBN-13: [TBA]  
@@ -76,6 +77,8 @@ Paperback: est. Q4 2017
 
 - Appendix F: NumPy Overview
 
-- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_tensorflow.pdf)]
+- ~~Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_tensorflow.pdf)]~~
+
+- Appendix G: PyTorch Basics
 
 - Appendix H: Cloud Computing
