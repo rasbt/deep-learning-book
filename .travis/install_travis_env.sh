@@ -55,9 +55,7 @@ if [ "${NOTEBOOKS}" = "true" ]; then
     #   # conda install -q -y tensorflow=$TENSORFLOW_VERSION;
     #   pip install $TF_BINARY_URL
 
-    conda install pytorch torchvision -c soumith
-
-    fi
+    conda install pytorch torchvision -c soumith;
 fi
 
 
