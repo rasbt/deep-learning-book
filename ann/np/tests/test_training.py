@@ -40,7 +40,7 @@ class TestIterateMinibatches(unittest.TestCase):
         b = np.array([7, 8, 9, 10, 11, 12])
         it = iterate_minibatches((a, b), batch_size=6)
         m = list(next(it))
-        self.assertTrue(np.array_equal(m[0], a)), print(m)
+        self.assertTrue(np.array_equal(m[0], a))
         self.assertTrue(np.array_equal(m[1], b))
 
     def test_default_hugebatch(self):
