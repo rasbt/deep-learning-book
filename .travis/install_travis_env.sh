@@ -45,17 +45,16 @@ if [ "${NOTEBOOKS}" = "true" ]; then
     pip install watermark;
     pip install nbformat;
 
-    ### OLD
     # temporary pip install until 0.12 is released on conda
-    # export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp35-cp35m-linux_x86_64.whl
-    # if [ "${LATEST}" = "true" ]; then
-    #  # conda install tensorflow;
-    #   pip install $TF_BINARY_URL
-    # else
-    #   # conda install -q -y tensorflow=$TENSORFLOW_VERSION;
-    #   pip install $TF_BINARY_URL
+    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp35-cp35m-linux_x86_64.whl
+    if [ "${LATEST}" = "true" ]; then
+      # conda install tensorflow;
+      pip install $TF_BINARY_URL
+    else
+      # conda install -q -y tensorflow=$TENSORFLOW_VERSION;
+      pip install $TF_BINARY_URL
 
-    conda install pytorch torchvision -c soumith;
+    fi
 fi
 
 
