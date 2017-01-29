@@ -15,3 +15,4 @@ from .preprocessing import onehot_reverse
 from .preprocessing import square_padding
 from .scoring import accuracy_1d
 from .scoring import accuracy_2d
+from .training import iterate_minibatches
