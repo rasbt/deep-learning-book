@@ -22,3 +22,11 @@ from .lossfunctions import crossentropy_loss
 from .lossfunctions import log_loss
 from .lossfunctions import sse_derivative
 from .lossfunctions import crossentropy_derivative
+from .activations import linear_activation
+from .activations import linear_derivative
+from .activations import logistic_activation
+from .activations import logistic_derivative
+from .activations import logistic_derivative_from_logistic
+from .activations import tanh_activation
+from .activations import tanh_derivative
+from .activations import tanh_derivative_from_tanh
