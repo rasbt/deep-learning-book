@@ -16,3 +16,7 @@ from .preprocessing import square_padding
 from .scoring import accuracy_1d
 from .scoring import accuracy_2d
 from .training import iterate_minibatches
+from .lossfunctions import mse_loss
+from .lossfunctions import sse_loss
+from .lossfunctions import crossentropy_loss
+from .lossfunctions import log_loss
