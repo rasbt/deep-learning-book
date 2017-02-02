@@ -30,3 +30,9 @@ from .activations import logistic_derivative_from_logistic
 from .activations import tanh_activation
 from .activations import tanh_derivative
 from .activations import tanh_derivative_from_tanh
+from .activations import relu_activation
+from .activations import relu_derivative
+from .activations import softplus_activation
+from .activations import softplus_derivative
+from .activations import softmax_activation
+from .activations import softmax_derivative
