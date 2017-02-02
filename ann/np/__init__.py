@@ -20,3 +20,5 @@ from .lossfunctions import mse_loss
 from .lossfunctions import sse_loss
 from .lossfunctions import crossentropy_loss
 from .lossfunctions import log_loss
+from .lossfunctions import sse_derivative
+from .lossfunctions import crossentropy_derivative

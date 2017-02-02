@@ -37,6 +37,33 @@ def sse_loss(predictions, targets):
     return np.sum(np.square(predictions - targets))
 
 
+def sse_derivative(predictions, targets):
+    """Derivative of the Sum Squared error loss function
+
+    Note that this derivative assumes the SSE form: 1/2 * SSE.
+    For the "regular" SSE, use 2*sse_derivative.
+
+    Parameters
+    ----------
+    predictions : numpy array, shape=(n_samples, )
+        Predicted values
+    targets : numpy array, shape=(n_samples, )
+        True target values
+
+    Returns
+    ----------
+    float
+        -(predictions - targets)
+
+    Examples
+    ----------
+    >>> sse_derivative(np.array([0.1, 2., 1.]), np.array([0, 1, 1]))
+    -1.1
+    >>>
+    """
+    return np.sum(-(predictions - targets))
+
+
 def mse_loss(predictions, targets):
     """Mean squared error loss function
 
@@ -95,6 +122,31 @@ def crossentropy_loss(softmax_predictions, onehot_targets, eps=1e-10):
     """
     return np.mean(-np.sum(onehot_targets * np.log(softmax_predictions + eps),
                    axis=1))
+
+
+def crossentropy_derivative(predictions, targets):
+    """Derivative of the Cross Entropy loss function
+
+    Parameters
+    ----------
+    predictions : numpy array, shape=(n_samples, )
+        Predicted values
+    targets : numpy array, shape=(n_samples, )
+        True target values
+
+    Returns
+    ----------
+    float
+        sum[ targets / (1 + exp(predictions)) ]
+
+    Examples
+    ----------
+    >>> round(crossentropy_derivative(np.array([0.1, 2., 1.]), \
+    ...                               np.array([0, 1, 1])), 6)
+    0.388144
+    >>>
+    """
+    return np.sum(targets / (1. + np.exp(predictions)))
 
 
 def log_loss(predictions, targets, eps=1e-10):

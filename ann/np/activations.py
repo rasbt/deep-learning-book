@@ -13,6 +13,20 @@
 import numpy as np
 
 
+def linear_activation(x):
+    return x
+
+
+def linear_derivative:
+    return 1
+
+
+def logistic_activation(x):
+    """ Logistic Sigmoid Activation Function
+    """
+    return 1. / (1. + np.exp(-np.clip(x, -250, 250)))
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()

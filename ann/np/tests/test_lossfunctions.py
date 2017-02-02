@@ -12,7 +12,9 @@ import unittest
 import numpy as np
 from ann.np import mse_loss
 from ann.np import sse_loss
+from ann.np import sse_derivative
 from ann.np import crossentropy_loss
+from ann.np import crossentropy_derivative
 from ann.np import log_loss
 
 
@@ -38,6 +40,17 @@ class TestSSE(unittest.TestCase):
                                   np.array([4., 4.])), 5.)
 
 
+class TestSSEDeriv(unittest.TestCase):
+
+    def test_1d(self):
+        self.assertEqual(sse_derivative(np.array([0.1]),
+                                        np.array([0])), -0.1)
+
+    def test_2d(self):
+        self.assertEqual(sse_derivative(np.array([0.1, 2., 1.]),
+                                        np.array([0, 1, 1])), -1.1)
+
+
 class TestCrossEntropy(unittest.TestCase):
 
     def test_n_samples(self):
@@ -58,6 +71,19 @@ class TestCrossEntropy(unittest.TestCase):
         class_labels = np.array([[1.0, 0.0, 0.0]])
         self.assertEqual(round(crossentropy_loss(softmax_out,
                          class_labels), 8), 0.69314718)
+
+
+class TestCrossEntDeriv(unittest.TestCase):
+
+    def test_1d(self):
+        deriv = crossentropy_derivative(np.array([0.1]),
+                                        np.array([1]))
+        self.assertEqual(round(deriv, 6), 0.475021)
+
+    def test_2d(self):
+        deriv = crossentropy_derivative(np.array([0.1, 2., 1.]),
+                                        np.array([0, 1, 1]))
+        self.assertEqual(round(deriv, 6), 0.388144)
 
 
 class TestLogLoss(unittest.TestCase):
