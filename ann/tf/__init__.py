@@ -1,4 +1,4 @@
-""" Submodule containing additional PyTorch utilities
+""" Submodule containing additional TensorFlow utilities
 """
 # Sebastian Raschka 2016-2017
 #
