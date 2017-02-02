@@ -30,7 +30,7 @@ def sse_loss(predictions, targets):
 
     Examples
     ----------
-    >>> squared_error(np.array([2., 3.]), np.array([4., 4.]))
+    >>> sse_loss(np.array([2., 3.]), np.array([4., 4.]))
     5.0
     >>>
     """
@@ -58,7 +58,7 @@ def sse_derivative(predictions, targets):
     Examples
     ----------
     >>> sse_derivative(np.array([0.1, 2., 1.]), np.array([0, 1, 1]))
-    -1.1
+    -1.1000000000000001
     >>>
     """
     return np.sum(-(predictions - targets))
@@ -81,7 +81,7 @@ def mse_loss(predictions, targets):
 
     Examples
     ----------
-    >>> mean_squared_error(np.array([2., 3.]), np.array([4., 4.]))
+    >>> mse_loss(np.array([2., 3.]), np.array([4., 4.]))
     2.5
     >>>
     """
@@ -116,8 +116,8 @@ def crossentropy_loss(softmax_predictions, onehot_targets, eps=1e-10):
                                  [0.0, 1.0, 0.0],\
                                  [0.0, 1.0, 0.0],\
                                  [0.0, 0.0, 1.0]])
-    >>> np.around(cross_entropyloss(softmax_out, class_labels), 8)
-    0.47834405
+    >>> crossentropy_loss(softmax_out, class_labels)
+    0.47834405086684895
     >>>
     """
     return np.mean(-np.sum(onehot_targets * np.log(softmax_predictions + eps),
@@ -141,9 +141,9 @@ def crossentropy_derivative(predictions, targets):
 
     Examples
     ----------
-    >>> round(crossentropy_derivative(np.array([0.1, 2., 1.]), \
+    >>> round(crossentropy_derivative(np.array([0.1, 2., 1.]),
     ...                               np.array([0, 1, 1])), 6)
-    0.388144
+    0.38814399999999999
     >>>
     """
     return np.sum(targets / (1. + np.exp(predictions)))
@@ -170,10 +170,10 @@ def log_loss(predictions, targets, eps=1e-10):
 
     Examples
     ----------
-    >>> predictions = np.array([.2, .8, .7, .3]
+    >>> predictions = np.array([.2, .8, .7, .3])
     >>> class_labels = np.array([0, 1, 1, 0])
-    >>> round(log_loss(predictions, class_labels), 6)
-    0.289909
+    >>> log_loss(predictions, class_labels)
+    0.28990924749254249
     >>>
     """
     return np.mean(- (targets * np.log(predictions + eps) +
