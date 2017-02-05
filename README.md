@@ -65,18 +65,18 @@ Paperback: est. 2017-2018
 
 - Reinforcement Learning
 
-- Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_math_notation.pdf)]
+- Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.epub)]
 
 - Appendix B: Algebra Basics
 
 - Appendix C: Linear Algebra Essentials
 
-- Appendix D: Calculus and Differentiation Primer [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_d_calculus.pdf)]
+- Appendix D: Calculus and Differentiation Primer [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_d_calculus.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_d_calculus.epub)]
 
 - Appendix E: Python Setup
 
 - Appendix F: NumPy Overview
 
-- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_tensorflow.pdf)]
+- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)]
 
 - Appendix H: Cloud Computing
