@@ -71,7 +71,7 @@ Paperback: est. 2017-2018
 
 - Appendix C: Linear Algebra Essentials
 
-- Appendix D: Calculus and Differentiation Primer
+- Appendix D: Calculus and Differentiation Primer [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_d_calculus.pdf)]
 
 - Appendix E: Python Setup
 
