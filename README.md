@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/rasbt/deep-learning-book.svg?branch=master)](https://travis-ci.org/rasbt/deep-learning-book)
-![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)
-![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
+![Python 2.7](https://img.shields.io/badge/Python-2.7-blue.svg)
+![Python 3.6](https://img.shields.io/badge/Python-3.6-blue.svg)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-0.12.1-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 [![Mailing List](https://img.shields.io/badge/-Mailing%20List-lightgrey.svg)](https://groups.google.com/forum/#!forum/ann-and-dl-book)
 
 # Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
