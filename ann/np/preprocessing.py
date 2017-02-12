@@ -172,6 +172,44 @@ def square_padding(ary, n_elements, axes=(0, 1), value=0):
     return padded
 
 
+def l2_normalize(ary):
+    """ Scale one or multiple vectors to unit length via L2-normalization
+
+    Parameters
+    ----------
+    ary : NumPy array, shape=(,n_features) or shape=(n_vectors, n_features)
+        Input array containing the vectors to be scaled. Also supports
+        3D tensors of shape=(n_arrays, n_vectors, n_features).
+
+    Examples
+    --------
+    >>> # 1D Tensor:
+    >>> l2_normalize(np.array([1, 2, 3]))
+    array([ 0.26726124,  0.53452248,  0.80178373])
+    >>> # 2D Tensor:
+    >>> l2_normalize(np.array([[1, 2, 3],\
+                               [1, 2, 3],\
+                               [3, 2, 1]]))
+    array([[ 0.26726124,  0.53452248,  0.80178373],
+           [ 0.26726124,  0.53452248,  0.80178373],
+           [ 0.80178373,  0.53452248,  0.26726124]])
+    >>> # 3D Tensor:
+    >>> l2_normalize(np.array([[[1, 2, 3], [1, 2, 3], [1, 2, 3]],\
+                                [[1, 2, 3], [1, 2, 3], [1, 2, 3]]]))
+    array([[[ 0.26726124,  0.53452248,  0.80178373],
+            [ 0.26726124,  0.53452248,  0.80178373],
+            [ 0.26726124,  0.53452248,  0.80178373]],
+    <BLANKLINE>
+           [[ 0.26726124,  0.53452248,  0.80178373],
+            [ 0.26726124,  0.53452248,  0.80178373],
+            [ 0.26726124,  0.53452248,  0.80178373]]])
+    >>>
+    """
+
+    magnitudes = np.sqrt(np.sum(np.square(ary), axis=-1))[..., np.newaxis]
+    return ary / magnitudes
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
