@@ -1,0 +1,30 @@
+site_name: Deep Learning Book
+site_url: http://rasbt.github.io/deep-learning-book
+site_author: Sebastian Raschka
+site_description: "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python"
+
+
+repo_url: https://github.com/rasbt/deep-learning-book
+
+#include_search: true
+docs_dir: sources
+#theme: yeti
+
+site_favicon: favicon.ico
+
+markdown_extensions:
+  - extra
+  - tables
+  - fenced_code
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - mathjaxhelper.js
+extra_css:
+  - extra.css
+
+copyright: Copyright &copy; 2016-2017 <a href="http://sebastianraschka.com">Sebastian Raschka</a>
+
+pages:
+- Home: index.md
+- ann API:
+  - api-source/ann.np.md

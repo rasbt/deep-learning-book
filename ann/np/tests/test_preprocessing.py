@@ -12,6 +12,8 @@ import unittest
 import numpy as np
 from ann.np import onehot
 from ann.np import onehot_reverse
+from ann.np import square_padding
+from ann.np import l2_normalize
 
 
 class TestOnehot(unittest.TestCase):
@@ -91,6 +93,8 @@ class TestSquarePadding(unittest.TestCase):
                         [0., 0., 7., 8., 9., 0., 0.],
                         [0., 0., 0., 0., 0., 0., 0.],
                         [0., 0., 0., 0., 0., 0., 0.]])
+        got = square_padding(ary=a, n_elements=7, value=0)
+        np.testing.assert_allclose(exp, got)
 
     def test_1ary_defaults_3to6(self):
         a = np.array([[1., 2., 3.],
@@ -102,6 +106,8 @@ class TestSquarePadding(unittest.TestCase):
                         [0., 0., 4., 5., 6., 0.],
                         [0., 0., 7., 8., 9., 0.],
                         [0., 0., 0., 0., 0., 0.]])
+        got = square_padding(ary=a, n_elements=6, value=0)
+        np.testing.assert_allclose(exp, got)
 
     def test_2ary_defaults_3to7(self):
         a = np.array([[[1., 2., 3.],
@@ -126,6 +132,9 @@ class TestSquarePadding(unittest.TestCase):
                          [0., 0., 0., 0., 0., 0., 0.],
                          [0., 0., 0., 0., 0., 0., 0.]]])
 
+        got = square_padding(ary=a, n_elements=7, axes=(1, 2), value=0)
+        np.testing.assert_allclose(exp, got)
+
     def test_2ary_defaults_3to6(self):
         a = np.array([[[1., 2., 3.],
                        [4., 5., 6.],
@@ -133,6 +142,8 @@ class TestSquarePadding(unittest.TestCase):
                       [[10., 11., 12.],
                        [13., 5., 6.],
                        [7., 8., 9.]]])
+
+        got = square_padding(ary=a, n_elements=6, axes=(1, 2), value=0)
 
         exp = np.array([[[0., 0., 0., 0., 0., 0.],
                          [0., 0., 0., 0., 0., 0.],
@@ -146,6 +157,33 @@ class TestSquarePadding(unittest.TestCase):
                          [0., 0., 13., 5., 6., 0.],
                          [0., 0., 7., 8., 9., 0.],
                          [0., 0., 0., 0., 0., 0.]]])
+        np.testing.assert_allclose(exp, got)
+
+
+class TestL2Normalize(unittest.TestCase):
+    def test_1d(self):
+        exp = np.array([0.26726124, 0.53452248, 0.80178373])
+        got = l2_normalize(np.array([1, 2, 3]))
+        np.testing.assert_allclose(exp, got)
+
+    def test_2d(self):
+        exp = np.array([[0.26726124, 0.53452248, 0.80178373],
+                        [0.26726124, 0.53452248, 0.80178373],
+                        [0.80178373, 0.53452248, 0.26726124]])
+        got = l2_normalize(np.array([[1, 2, 3], [1, 2, 3], [3, 2, 1]]))
+        np.testing.assert_allclose(exp, got)
+
+    def test_3d(self):
+        exp = np.array([[[0.26726124, 0.53452248, 0.80178373],
+                         [0.26726124, 0.53452248, 0.80178373],
+                         [0.26726124, 0.53452248, 0.80178373]],
+                        [[0.26726124, 0.53452248, 0.80178373],
+                         [0.26726124, 0.53452248, 0.80178373],
+                         [0.26726124, 0.53452248, 0.80178373]]])
+        got = l2_normalize(np.array([[[1, 2, 3], [1, 2, 3], [1, 2, 3]],
+                                     [[1, 2, 3], [1, 2, 3], [1, 2, 3]]]))
+        np.testing.assert_allclose(exp, got)
+
 
 if __name__ == '__main__':
     unittest.main()
