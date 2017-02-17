@@ -67,7 +67,8 @@ Paperback: est. 2017-2018
 
 - Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.epub)]
 
-- Appendix B: Algebra Basics
+- Appendix B: Algebra Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_b_algebra.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_b_algebra.epub)]
+
 
 - Appendix C: Linear Algebra Essentials
 
