@@ -81,3 +81,16 @@ Paperback: est. 2017-2018
 - Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)]
 
 - Appendix H: Cloud Computing
+
+
+## License
+
+### Code
+
+All code in this repository (including the code examples in Jupyter Notebooks) is open source content, released under the [MIT software license](LICENSE). In short, the permissive MIT license allows you to do anything with the code with proper attribution and without warranty; please check the MIT [LICENSE](LICENSE) notice for further details.
+
+### Text and Graphics
+
+All non-code content and creative work in this repository, including text and graphics, is under exclusive copyright by the author, Sebastian Raschka. Unless noted otherwise, text content shared in this repository is intended for personal use only. You may use, modify, or share short text passages of this work with proper attribution to the author. However, if you are planning to modify and/or share substantial portions of this book for other writings, such as blog posts, magazine article, or teaching material, contact the author for permission.
+
+Figures and graphics marked by a *Creative Commons Attribution-ShareAlike 4.0 International* are free to share under the respective license terms (as listed in the *Creative Commons Attribution-ShareAlike 4.0 International* section in the [LICENSE](LICENSE) file) and proper attribution.
