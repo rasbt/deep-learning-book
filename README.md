@@ -96,7 +96,7 @@ All non-code content and creative work in this repository, including text and gr
 Figures and graphics marked by a *Creative Commons Attribution-ShareAlike 4.0 International* are free to share under the respective license terms (as listed in the *Creative Commons Attribution-ShareAlike 4.0 International* section in the [LICENSE](LICENSE) file) and proper attribution.
 
 
-### Acknowledgements
+## Acknowledgements
 
 I would like to give my special thanks to the readers, who caught various typos and errors and offered suggestions for clarifying my writing.
 
