@@ -94,3 +94,12 @@ All code in this repository (including the code examples in Jupyter Notebooks) i
 All non-code content and creative work in this repository, including text and graphics, is under exclusive copyright by the author, Sebastian Raschka. Unless noted otherwise, text content shared in this repository is intended for personal use only. You may use, modify, or share short text passages of this work with proper attribution to the author. However, if you are planning to modify and/or share substantial portions of this book for other writings, such as blog posts, magazine article, or teaching material, contact the author for permission.
 
 Figures and graphics marked by a *Creative Commons Attribution-ShareAlike 4.0 International* are free to share under the respective license terms (as listed in the *Creative Commons Attribution-ShareAlike 4.0 International* section in the [LICENSE](LICENSE) file) and proper attribution.
+
+
+### Acknowledgements
+
+I would like to give my special thanks to the readers, who caught various typos and errors and offered suggestions for clarifying my writing.
+
+- Appendix A: Artem Sobolev, Ryan Sun
+- Appendix B: Brett Miller
+- Appendix D: Marcel Blattner, Ignacio Campabadal
