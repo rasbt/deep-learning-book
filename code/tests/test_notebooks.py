@@ -17,7 +17,7 @@ def run_ipynb(path):
 def run_ipynb2(path):
     args = ["python", "-m", "nbconvert", "--to",
             "notebook", "--execute", "--output",
-            'tempfile', path]
+            "./tempfile.ipynb", path]
     subprocess.check_output(args)
 
 
