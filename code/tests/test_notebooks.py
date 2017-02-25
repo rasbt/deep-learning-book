@@ -7,7 +7,6 @@ import nbformat
 
 
 def run_ipynb(path):
-    error_cells = []
     with tempfile.NamedTemporaryFile(suffix=".ipynb") as fout:
         args = ["python", "-m", "nbconvert", "--to",
                 "notebook", "--execute", "--output",
@@ -15,14 +14,18 @@ def run_ipynb(path):
         subprocess.check_output(args)
 
 
+def run_ipynb2(path):
+    args = ["python", "-m", "nbconvert", "--to",
+            "notebook", "--execute", "--output",
+            'tempfile', path]
+    subprocess.check_output(args)
+
+
 class TestNotebooks(unittest.TestCase):
 
     def test_appendix_g_tensorflow_basics(self):
         this_dir = os.path.dirname(os.path.abspath(__file__))
-        print(this_dir)
-        os.chdir(this_dir)
-        print(os.listdir(this_dir))
-        run_ipynb('../appendix_g_tensorflow-basics.ipynb')
+        run_ipynb2('../appendix_g_tensorflow-basics.ipynb')
 
 
 if __name__ == '__main__':
