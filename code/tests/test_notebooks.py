@@ -15,10 +15,9 @@ def run_ipynb(path):
 
 
 def run_ipynb2(path):
-    with tempfile.NamedTemporaryFile(suffix=".ipynb") as fout:
-        args = ["python", "-m", "nbconvert", "--to",
-                "notebook", "--execute", path]
-        subprocess.check_output(args)
+    args = ["python", "-m", "nbconvert", "--to",
+            "notebook", "--execute", path]
+    subprocess.check_output(args)
 
 
 class TestNotebooks(unittest.TestCase):
