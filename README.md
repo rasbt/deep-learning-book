@@ -101,5 +101,5 @@ Figures and graphics marked by a *Creative Commons Attribution-ShareAlike 4.0 In
 I would like to give my special thanks to the readers, who caught various typos and errors and offered suggestions for clarifying my writing.
 
 - Appendix A: Artem Sobolev, Ryan Sun
-- Appendix B: Brett Miller
-- Appendix D: Marcel Blattner, Ignacio Campabadal
+- Appendix B: Brett Miller, Ryan Sun
+- Appendix D: Marcel Blattner, Ignacio Campabadal, Ryan Sun
