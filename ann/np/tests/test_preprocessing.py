@@ -14,6 +14,8 @@ from ann.np import onehot
 from ann.np import onehot_reverse
 from ann.np import square_padding
 from ann.np import l2_normalize
+from ann.np import minmax_scaling
+from ann.np import standardize
 
 
 class TestOnehot(unittest.TestCase):
@@ -184,6 +186,44 @@ class TestL2Normalize(unittest.TestCase):
                                      [[1, 2, 3], [1, 2, 3], [1, 2, 3]]]))
         np.testing.assert_allclose(exp, got)
 
+
+class TestMinMax(unittest.TestCase):
+    def test_standardize(self):
+        train_ary = np.array([[1, 1, 1],
+                              [4, 5, 6]])
+        test_ary = np.array([[1, 2, 3],
+                             [4, 3, 4]])
+        train_rescaled, tmin, tmax = minmax_scaling(train_ary,
+                                                    feature_minmax=(0.1, 0.9))
+        exp_train = np.array([[0.1, 0.1, 0.1],
+                              [0.9, 0.9, 0.9]])
+        np.testing.assert_allclose(train_rescaled, exp_train)
+
+        test_rescaled, _, _ = minmax_scaling(test_ary,
+                                             feature_minmax=(0.1, 0.9),
+                                             precomputed_min=tmin,
+                                             precomputed_max=tmax)
+        exp_test = np.array([[0.1, 0.3, 0.42],
+                             [0.9, 0.5, 0.58]])
+        np.testing.assert_allclose(test_rescaled, exp_test)
+
+
+class TestStandardize(unittest.TestCase):
+    def test_standardize(self):
+        train_ary = np.array([[1, 1, 1],
+                              [4, 5, 6]])
+        test_ary = np.array([[1, 2, 3],
+                             [4, 3, 4]])
+        train_rescaled, tmean, tstd = standardize(train_ary)
+        exp_train = np.array([[-1., -1., -1.],
+                              [1., 1., 1.]])
+        np.testing.assert_allclose(train_rescaled, exp_train)
+        test_rescaled, _, _ = standardize(test_ary,
+                                          precomputed_mean=tmean,
+                                          precomputed_std=tstd)
+        exp_test = np.array([[-1., -0.5, -0.2],
+                             [1., 0., 0.2]])
+        np.testing.assert_allclose(test_rescaled, exp_test)
 
 if __name__ == '__main__':
     unittest.main()

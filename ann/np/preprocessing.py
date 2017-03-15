@@ -210,6 +210,111 @@ def l2_normalize(ary):
     return ary / magnitudes
 
 
+def minmax_scaling(ary, feature_minmax=(0., 1.),
+                   precomputed_min=None, precomputed_max=None):
+    """Rescales features to a fixed range of values
+
+    Parameters
+    ----------
+    ary : 2D array, shape=(n_samples, n_features)
+        The input array to be rescaled
+    feature_minmax : tuple (default: (0., 1.))
+        The new min and max values for each feature column.
+    precomputed_min : array, shape=(n_features,) or None (default: None)
+        Precomputed feature minimum values that are used for the
+        rescaling if not None
+    precomputed_max : array, shape=(n_features,) or None (default: None)
+        Precomputed feature maximum values that are used for the
+        rescaling if not None
+
+    Returns
+    -------
+    rescaled_ary, precomputed_min, precomputed_max
+        Returns the rescaled array, and the rescaling parameters
+        for re-use.
+
+    Examples
+    --------
+    >>> train_ary = np.array([[1, 1, 1],
+    ...                       [4, 5, 6]])
+    >>> test_ary = np.array([[1, 2, 3],
+    ...                      [4, 3, 4]])
+    >>> train_rescaled, tmin, tmax = minmax_scaling(train_ary,
+    ...                                             feature_minmax=(0.1, 0.9))
+    >>> train_rescaled
+    array([[ 0.1,  0.1,  0.1],
+           [ 0.9,  0.9,  0.9]])
+    >>> test_rescaled, _, _ = minmax_scaling(test_ary,
+    ...                                      feature_minmax=(0.1, 0.9),
+    ...                                      precomputed_min=tmin,
+    ...                                      precomputed_max=tmax)
+    >>> test_rescaled
+    array([[ 0.1 ,  0.3 ,  0.42],
+           [ 0.9 ,  0.5 ,  0.58]])
+
+    """
+    if precomputed_min is None:
+        precomputed_min = ary.min(axis=0)
+    if precomputed_max is None:
+        precomputed_max = ary.max(axis=0)
+
+    numerator = (ary - precomputed_min) * (feature_minmax[1] -
+                                           feature_minmax[0])
+    denominator = (precomputed_max - precomputed_min)
+    rescaled_ary = feature_minmax[0] + numerator/denominator
+
+    return rescaled_ary, precomputed_min, precomputed_max
+
+
+def standardize(ary, precomputed_mean=None, precomputed_std=None):
+    """Rescales features to z-scores with zero-mean and unit variance
+
+    Parameters
+    ----------
+    ary : 2D array, shape=(n_samples, n_features)
+        The input array to be rescaled
+    precomputed_mean : array, shape=(n_features,) or None (default: None)
+        Precomputed feature mean values that are used for the
+        rescaling if not None
+    precomputed_std : array, shape=(n_features,) or None (default: None)
+        Precomputed feature standard deviations that are used for the
+        rescaling if not None
+
+    Returns
+    -------
+    rescaled_ary, precomputed_mean, precomputed_std
+        Returns the rescaled array, and the rescaling parameters
+        for re-use.
+
+    Examples
+    --------
+    >>> train_ary = np.array([[1, 1, 1],
+    ...                       [4, 5, 6]])
+    >>> test_ary = np.array([[1, 2, 3],
+    ...                      [4, 3, 4]])
+    >>> train_rescaled, tmean, tstd = standardize(train_ary)
+    >>> train_rescaled
+    array([[-1., -1., -1.],
+           [ 1.,  1.,  1.]])
+    >>> test_rescaled, _, _ = standardize(test_ary,
+    ...                                   precomputed_mean=tmean,
+    ...                                   precomputed_std=tstd)
+    >>> test_rescaled
+    array([[-1. , -0.5, -0.2],
+           [ 1. ,  0. ,  0.2]])
+
+    """
+
+    if precomputed_std is None:
+        precomputed_std = ary.std(axis=0, ddof=0)
+    if precomputed_mean is None:
+        precomputed_mean = ary.mean(axis=0)
+
+    scaled_ary = (ary - precomputed_mean) / precomputed_std
+
+    return scaled_ary, precomputed_mean, precomputed_std
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
