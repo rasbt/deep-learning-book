@@ -40,20 +40,17 @@ if [ "${COVERAGE}" = "true" ]; then
     pip install coveralls
 fi
 
+if [ "${LATEST}" = "true" ]; then
+  pip install tensorflow
+else
+  pip install tensorflow==$TENSORFLOW_VERSION
+fi
+
 if [ "${NOTEBOOKS}" = "true" ]; then
     conda install -q -y jupyter matplotlib;
     pip install watermark;
     pip install nbformat;
 
-    # temporary pip install until 0.12 is released on conda
-    if [ "${LATEST}" = "true" ]; then
-      # conda install tensorflow;
-      pip install tensorflow
-    else
-      # conda install -q -y tensorflow=$TENSORFLOW_VERSION;
-      pip install tensorflow==$TENSORFLOW_VERSION
-
-    fi
 fi
 
 
