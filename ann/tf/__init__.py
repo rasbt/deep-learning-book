@@ -1,4 +1,4 @@
-""" Submodule containing additional TensorFlow utilities
+""" Submodule containing TensorFlow functions
 """
 # Sebastian Raschka 2016-2017
 #
@@ -9,3 +9,6 @@
 # Author: Sebastian Raschka <sebastianraschka.com>
 #
 # License: MIT
+
+from .layers import conv_layer
+from .layers import fc_layer
