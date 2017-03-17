@@ -94,5 +94,6 @@ class TestLayers(unittest.TestCase):
 
         assert train_acc[0] == np.array(0.1, dtype=np.float32)
 
+
 if __name__ == '__main__':
     unittest.main()
