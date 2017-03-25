@@ -315,6 +315,80 @@ def standardize(ary, precomputed_mean=None, precomputed_std=None):
     return scaled_ary, precomputed_mean, precomputed_std
 
 
+def subsampling_frequent_tokens(ary, threshold=1e-5,
+                                token_counts=None, seed=None):
+    """ Remove frequent tokens (words) from a training corpus
+
+    Description
+    -----------
+    This is an implementation of Mikolov et al's simple subsampling technique
+    proposed in the improved skip-gram model for Word2Vec in
+    - Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg S. Corrado,
+      and Jeff Dean. "Distributed representations of words and
+      phrases and their compositionality." In Advances in neural
+      information processing systems, pp. 3111-3119. 2013.
+    Using this empirical subsampling technique, each token t (or word)
+    in the corpus is removed with a probability
+    P(t)= 1 - sqrt(threshold/frequency(t)).
+
+    Parameters
+    ----------
+    ary : array-like, shape=[n_samples, n_tokens]
+        An array or list of list in which each row contains
+        an arbitrary number of words or tokens.
+    threshold : float (default: 1e-5)
+        A positive float as subsampling threshold. The higher
+        the threshold, the higher the probability of removing
+        a given word.
+    token_counts : dict or None (default: None)
+        A dictionary with tokens as keys and token counts
+        as values, which can optionally be provided to save
+        computational costs if such a dictionary was
+        already pre-computed.
+    seed : int or None (default: None)
+        A random seed for the pseudo-random number generator.
+
+    Returns
+    -------
+    list, shape=(n_samples, n_tokens)
+        A list of list containing the remaining, infrequent tokens that
+        have not been removed from the dataset.
+
+    Examples:
+    ---------
+    >>> ary = [['this', 'is', 'is', 'a', 'test'],
+    ...        ['test', 'hello', 'world']]
+    >>> subsampling_frequent_tokens(ary, threshold=0.1, seed=1)
+    [['this', 'is', 'a'], ['hello', 'world']]
+    >>> ary = ['this', 'is', 'is', 'a',
+    ...        'test', 'test', 'hello', 'world']
+    >>> subsampling_frequent_tokens([ary], threshold=0.1, seed=1)[0]
+    ['this', 'is', 'a', 'hello', 'world']
+
+    """
+    rng = np.random.RandomState(seed)
+
+    if token_counts is None:
+        token_counts = {}
+        for row in ary:
+            for token in row:
+                token_counts[token] = token_counts.get(token, 0) + 1
+
+    total_count = float(sum((token_counts[k] for k in token_counts)))
+    token_counts = {k: token_counts[k] / total_count for k in token_counts}
+
+    def compute_proba(x):
+        return 1 - np.sqrt(threshold / token_counts[x])
+
+    subsampled = []
+    for row in ary:
+        new_row = [token for token in row
+                   if compute_proba(token) < rng.rand()]
+        subsampled.append(new_row)
+
+    return subsampled
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
