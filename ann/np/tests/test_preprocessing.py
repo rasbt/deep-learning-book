@@ -16,6 +16,7 @@ from ann.np import square_padding
 from ann.np import l2_normalize
 from ann.np import minmax_scaling
 from ann.np import standardize
+from ann.np import subsampling_frequent_tokens
 
 
 class TestOnehot(unittest.TestCase):
@@ -224,6 +225,16 @@ class TestStandardize(unittest.TestCase):
         exp_test = np.array([[-1., -0.5, -0.2],
                              [1., 0., 0.2]])
         np.testing.assert_allclose(test_rescaled, exp_test)
+
+
+class SubsamplingFrequentTokens(unittest.TestCase):
+    def test_simple(self):
+        ary = [['this', 'is', 'is', 'a', 'test'],
+               ['test', 'hello', 'world']]
+        got = subsampling_frequent_tokens(ary, threshold=0.1, seed=1)
+        expect = [['this', 'is', 'a'], ['hello', 'world']]
+        self.assertEqual(got, expect)
+
 
 if __name__ == '__main__':
     unittest.main()
