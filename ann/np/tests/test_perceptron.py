@@ -9,6 +9,8 @@
 # License: MIT
 
 import unittest
+import os
+import inspect
 import numpy as np
 from ann.np.perceptron import perceptron_train
 from ann.np.perceptron import perceptron_predict
@@ -16,8 +18,10 @@ from ann.np.perceptron import perceptron_predict
 
 class TestPerceptron(unittest.TestCase):
 
-    data = np.genfromtxt(fname='/Users/Sebastian/Desktop/iris_binary.csv',
-                         delimiter=',')
+    this_dir = os.path.dirname(os.path.abspath(inspect.getfile(
+                               inspect.currentframe())))
+    iris_fname = os.path.join(this_dir, 'iris_binary.csv')
+    data = np.genfromtxt(fname=iris_fname, delimiter=',')
     X, y = data[:, :4], data[:, 4]
 
     def test_zero_weights(self):
