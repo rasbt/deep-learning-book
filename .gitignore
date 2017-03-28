@@ -3,9 +3,9 @@
 
 # TensorFlow Checkpoint files
 checkpoint
-code/*.data-?????-of-?????
-code/*.index
-code/*.meta
+code/*/*.data-?????-of-?????
+code/*/*.index
+code/*/*.meta
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
