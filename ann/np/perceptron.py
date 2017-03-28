@@ -62,7 +62,7 @@ def perceptron_train(features, targets, mparams=None,
         else:
             rng = np.random.RandomState(seed)
             mparams['weights'] = rng.normal(loc=0.0, scale=0.1,
-                                           size=(features.shape[1]))
+                                            size=(features.shape[1]))
 
     # train one epoch
     for training_example, true_label in zip(features, targets):
