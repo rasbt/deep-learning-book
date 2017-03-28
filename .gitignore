@@ -1,6 +1,11 @@
 # Temporary OS files
 .DS_Store
 
+# TensorFlow Checkpoint files
+checkpoint
+code/*.data-?????-of-?????
+code/*.index
+code/*.meta
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -27,33 +27,33 @@ class TestPerceptron(unittest.TestCase):
     def test_zero_weights(self):
 
         X, y = self.X, self.y
-        model_params = perceptron_train(X, y, params=None, zero_weights=True)
+        model_mparams = perceptron_train(X, y, mparams=None, zero_weights=True)
 
-        assert model_params['weights'][0] == 7.
+        assert model_mparams['weights'][0] == 7.
 
         for _ in range(5):
-            _ = perceptron_train(X, y, params=model_params)
+            _ = perceptron_train(X, y, mparams=model_mparams)
 
-        errors = np.sum(perceptron_predict(X, model_params) != y)
+        errors = np.sum(perceptron_predict(X, model_mparams) != y)
 
         assert errors == 0
-        assert round(model_params['weights'][0], 1) == -1.1
+        assert round(model_mparams['weights'][0], 1) == -1.1
 
     def test_random_weights(self):
 
         X, y = self.X, self.y
-        model_params = perceptron_train(X, y, params=None,
-                                        zero_weights=False, seed=1)
+        model_mparams = perceptron_train(X, y, mparams=None,
+                                         zero_weights=False, seed=1)
 
-        assert round(model_params['weights'][0], 1) == 2.1
+        assert round(model_mparams['weights'][0], 1) == 2.1
 
         for _ in range(5):
-            _ = perceptron_train(X, y, params=model_params)
+            _ = perceptron_train(X, y, mparams=model_mparams)
 
-        errors = np.sum(perceptron_predict(X, model_params) != y)
+        errors = np.sum(perceptron_predict(X, model_mparams) != y)
 
         assert errors == 0
-        assert round(model_params['weights'][0], 1) == -1.1
+        assert round(model_mparams['weights'][0], 1) == -1.1
 
 
 if __name__ == '__main__':
