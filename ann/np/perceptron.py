@@ -71,12 +71,12 @@ def perceptron_train(features, targets, mparams=None,
         # if class 1 was predicted but true label is 0
         if linear > 0. and not true_label:
             mparams['weights'] -= learning_rate * training_example
-            mparams['bias'] -= 1.
+            mparams['bias'] -= learning_rate * 1.
 
         # if class 0 was predicted but true label is 1
         elif linear <= 0. and true_label:
             mparams['weights'] += learning_rate * training_example
-            mparams['bias'] += 1.
+            mparams['bias'] += learning_rate * 1.
 
     return mparams
 
