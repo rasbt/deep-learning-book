@@ -37,7 +37,7 @@ Paperback: est. 2017-2018
 
 - Introduction
 
-- The Perceptron [Code Notebook](code/ch02_perceptron/ch02_perceptron.ipynb)
+- The Perceptron [[Code Notebook](code/ch02_perceptron/ch02_perceptron.ipynb)]
 
 - Optimizing Cost Functions with Gradient Descent
 
@@ -78,7 +78,7 @@ Paperback: est. 2017-2018
 
 - Appendix F: NumPy Overview
 
-- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)] [Code Notebook](code/appendix_g_tensorflow-basics/appendix_g_tensorflow-basics.ipynb)
+- Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)] [[Code Notebook](code/appendix_g_tensorflow-basics/appendix_g_tensorflow-basics.ipynb)]
 
 - Appendix H: Cloud Computing [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.epub)]
 
