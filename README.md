@@ -76,7 +76,7 @@ Paperback: est. 2017-2018
 
 - Appendix E: Python Setup
 
-- Appendix F: NumPy Overview
+- Appendix F: Introduction to NumPy [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.epub)] [[Code Notebook](code/appendix_f_numpy-intro/appendix_f_numpy-intro.ipynb)]
 
 - Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)] [[Code Notebook](code/appendix_g_tensorflow-basics/appendix_g_tensorflow-basics.ipynb)]
 
