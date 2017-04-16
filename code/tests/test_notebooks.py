@@ -28,7 +28,7 @@ class TestNotebooks(unittest.TestCase):
                                '../ch02_perceptron/'
                                'ch02_perceptron.ipynb'))
 
-    def test_appendix_f_numpy-intro(self):
+    def test_appendix_f_numpy_intro(self):
         this_dir = os.path.dirname(os.path.abspath(__file__))
         run_ipynb(os.path.join(this_dir,
                                '../appendix_f_numpy-intro/'
