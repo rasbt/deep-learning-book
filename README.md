@@ -103,4 +103,5 @@ I would like to give my special thanks to the readers, who caught various typos 
 - Appendix A: Artem Sobolev, Ryan Sun
 - Appendix B: Brett Miller, Ryan Sun
 - Appendix D: Marcel Blattner, Ignacio Campabadal, Ryan Sun
+- Appendix F: Guillermo Moncecchi‏, Ged Ridgway
 - Appendix H: Brett Miller
