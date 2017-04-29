@@ -82,6 +82,7 @@ Paperback: est. 2017-2018
 
 - Appendix H: Cloud Computing [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.epub)]
 
+- [Model Zoo](code/model_zoo): A collection of standalone TensorFlow models in Jupyter Notebooks
 
 ## License
 
