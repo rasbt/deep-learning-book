@@ -82,7 +82,7 @@ class TestLayers(unittest.TestCase):
         with tf.Session(graph=g) as sess:
             sess.run(tf.global_variables_initializer())
             for i in range(10000):
-                batch = mnist.train.next_batch(100)
+                batch = mnist.train.next_batch(100, shuffle=False)
                 feed_dict = {x: batch[0], y: batch[1]}
 
                 if not i % 100:
