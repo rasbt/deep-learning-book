@@ -58,7 +58,7 @@ class Cifar10Loader():
         self.num_train = self.count_train()
         self.num_test = self.count_test()
 
-    def load_test(self, onehot=True):
+    def load_test(self, onehot=True, normalize=True):
         dct = unpickle_cifar(self.testname)
         dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
 
@@ -66,23 +66,35 @@ class Cifar10Loader():
             dct[b'labels'] = (np.arange(10) ==
                               dct[b'labels'][:, None]).astype(int)
 
+        if normalize:
+            dct[b'data'] = dct[b'data'].astype(np.float32)
+            dct[b'data'] = dct[b'data'] / 255.0
+            
+        dct[b'data'] = dct[b'data'].reshape(dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
         return dct[b'data'], dct[b'labels']
 
     def load_train_epoch(self, batch_size=50, onehot=True,
-                         shuffle=False, seed=None):
+                         shuffle=False, normalize=True, seed=None):
 
         rgen = np.random.RandomState(seed)
 
         for batch in self.batchnames:
             dct = unpickle_cifar(batch)
             dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
+            dct[b'data'] = dct[b'data'].reshape(dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
 
             if onehot:
                 dct[b'labels'] = (np.arange(10) ==
                                   dct[b'labels'][:, None]).astype(int)
 
             arrays = [dct[b'data'], dct[b'labels']]
+            
             del dct
+
+            if normalize:
+                arrays[0] = arrays[0].astype(np.float32)
+                arrays[0] = np.multiply(arrays[0], 1.0 / 255.0)
+
             indices = np.arange(arrays[0].shape[0])
 
             if shuffle:
