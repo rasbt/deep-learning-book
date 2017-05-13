@@ -1,3 +1,14 @@
+# Sebastian Raschka 2016-2017
+#
+# Supporting code for the book
+# "Introduction to Artificial Neural Networks and Deep Learning:
+#  A Practical Guide with Applications in Python"
+#
+# Source: https://github.com/rasbt/deep-learning-book
+# Author: Sebastian Raschka <sebastianraschka.com>
+# License: MIT
+
+
 from urllib.request import urlretrieve
 import tarfile
 import os
@@ -49,7 +60,8 @@ def unpickle_cifar(fpath):
 
 
 class Cifar10Loader():
-    def __init__(self, cifar_path):
+    def __init__(self, cifar_path, normalize=False, 
+                 channel_mean_center=False, zero_center=False):
         self.cifar_path = cifar_path
         self.batchnames = [os.path.join(self.cifar_path, f)
                            for f in os.listdir(self.cifar_path)
@@ -57,44 +69,87 @@ class Cifar10Loader():
         self.testname = os.path.join(self.cifar_path, 'test_batch')
         self.num_train = self.count_train()
         self.num_test = self.count_test()
-
-    def load_test(self, onehot=True, normalize=True):
+        self.normalize = normalize
+        self.channel_mean_center = channel_mean_center
+        self.zero_center = zero_center
+        self.train_mean = None
+  
+    def _compute_train_mean(self):
+        
+        cum_mean = np.zeros((1, 1, 1, 3))
+        
+        for batch in self.batchnames:
+            dct = unpickle_cifar(batch)
+            dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
+            dct[b'data'] = dct[b'data'].reshape(
+                dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
+            mean = dct[b'data'].mean(axis=(0, 1, 2), keepdims=True)
+            cum_mean += mean
+        
+        self.train_mean = cum_mean / len(self.batchnames)
+        
+        return None
+               
+    def load_test(self, onehot=True):
         dct = unpickle_cifar(self.testname)
         dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
+        
+        dct[b'data'] = dct[b'data'].reshape(
+            dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
 
         if onehot:
             dct[b'labels'] = (np.arange(10) ==
                               dct[b'labels'][:, None]).astype(int)
 
-        if normalize:
+        if self.normalize:
             dct[b'data'] = dct[b'data'].astype(np.float32)
             dct[b'data'] = dct[b'data'] / 255.0
+       
+        if self.channel_mean_center:
+            if self.train_mean is None:
+                self._compute_train_mean()
+            dct[b'data'] -= self.train_mean   
             
-        dct[b'data'] = dct[b'data'].reshape(dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
+        if self.zero_center:
+            if self.normalize:
+                dct[b'data'] -= .5
+            else:
+                dct[b'data'] -= 127.5
+            
         return dct[b'data'], dct[b'labels']
 
     def load_train_epoch(self, batch_size=50, onehot=True,
-                         shuffle=False, normalize=True, seed=None):
+                         shuffle=False, seed=None):
 
         rgen = np.random.RandomState(seed)
 
         for batch in self.batchnames:
             dct = unpickle_cifar(batch)
             dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
-            dct[b'data'] = dct[b'data'].reshape(dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
+            dct[b'data'] = dct[b'data'].reshape(
+                dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
 
             if onehot:
                 dct[b'labels'] = (np.arange(10) ==
                                   dct[b'labels'][:, None]).astype(int)
+                
+            if self.normalize:
+                dct[b'data'] = dct[b'data'].astype(np.float32)
+                dct[b'data'] = dct[b'data'] / 255.0
 
-            arrays = [dct[b'data'], dct[b'labels']]
+            if self.channel_mean_center:
+                if self.train_mean is None:
+                    self._compute_train_mean()
+                dct[b'data'] -= self.train_mean
             
+            if self.zero_center:
+                if self.normalize:
+                    dct[b'data'] -= .5
+                else:
+                    dct[b'data'] -= 127.5
+                    
+            arrays = [dct[b'data'], dct[b'labels']]
             del dct
-
-            if normalize:
-                arrays[0] = arrays[0].astype(np.float32)
-                arrays[0] = np.multiply(arrays[0], 1.0 / 255.0)
-
             indices = np.arange(arrays[0].shape[0])
 
             if shuffle:
