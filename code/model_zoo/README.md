@@ -14,5 +14,6 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Convolutional Neural Network](convnet.ipynb)
 - [Convolutional Neural Network VGG-16](convnet-vgg16.ipynb)
 - [Autoencoder](autoencoder.ipynb)
-- [Convolutional Autoencoder](autoencoder-conv.ipynb)
+- [Convolutional Autoencoder with Deconvolutions](autoencoder-deconv.ipynb)
+- [Convolutional Autoencoder with Nearest-neighbor Interpolation](autoencoder-conv.ipynb)
 - [General Adversarial Networks](gan.ipynb)
