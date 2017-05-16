@@ -9,6 +9,8 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Logistic Regression](logistic-regression.ipynb)
 - [Softmax Regression (Multinomial Logistic Regression)](softmax-regression.ipynb)
 - [Multilayer Perceptron](multilayer-perceptron.ipynb)
+- [Multilayer Perceptron with Dropout](multilayer-perceptron-dropout.ipynb)
+- [Multilayer Perceptron with Batch Normalization](multilayer-perceptron-batchnorm.ipynb)
 - [Convolutional Neural Network](convnet.ipynb)
 - [Convolutional Neural Network VGG-16](convnet-vgg16.ipynb)
 - [Autoencoder](autoencoder.ipynb)
