@@ -17,3 +17,4 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Convolutional Autoencoder with Deconvolutions](autoencoder-deconv.ipynb)
 - [Convolutional Autoencoder with Nearest-neighbor Interpolation](autoencoder-conv.ipynb)
 - [General Adversarial Networks](gan.ipynb)
+- [Convolutional General Adversarial Networks](gan-conv.ipynb)
