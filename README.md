@@ -7,9 +7,13 @@
 
 # Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python
 
-Repository for the book "Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python."
+Repository for the book *Introduction to Artificial Neural Networks and Deep Learning: A Practical Guide with Applications in Python*.
 
-**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in [*Python Machine Learning*](https://github.com/rasbt/python-machine-learning-book)" and implement deep learning algorithms in [TensorFlow](https://www.tensorflow.org).**
+---
+
+**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in [*Python Machine Learning*](https://github.com/rasbt/python-machine-learning-book) and implement deep learning algorithms in [TensorFlow](https://www.tensorflow.org).**
+
+---
 
 - This repository will contain the instructions, code examples, and solutions for the *Hands-On* and *Exercise* portions of each chapter.
 
@@ -21,6 +25,8 @@ Repository for the book "Introduction to Artificial Neural Networks and Deep Lea
 ISBN-10: [TBA]  
 ISBN-13: [TBA]  
 Paperback: est. 2018  
+
+---
 
 ## Manuscripts / Early Access Drafts
 
@@ -72,6 +78,8 @@ Paperback: est. 2018
 - Appendix H: Cloud Computing [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.epub)]
 
 - [Model Zoo](code/model_zoo): A collection of standalone TensorFlow models in Jupyter Notebooks
+
+---
 
 ## About the Book
 
