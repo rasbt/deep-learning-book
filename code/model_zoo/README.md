@@ -5,6 +5,8 @@
 
 A collection of standalone TensorFlow models in Jupyter Notebooks
 
+## Classifiers
+
 - [Perceptron](perceptron.ipynb)
 - [Logistic Regression](logistic-regression.ipynb)
 - [Softmax Regression (Multinomial Logistic Regression)](softmax-regression.ipynb)
@@ -13,8 +15,18 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Multilayer Perceptron with Batch Normalization](multilayer-perceptron-batchnorm.ipynb)
 - [Convolutional Neural Network](convnet.ipynb)
 - [Convolutional Neural Network VGG-16](convnet-vgg16.ipynb)
+
+## Autoencoders
+
 - [Autoencoder](autoencoder.ipynb)
 - [Convolutional Autoencoder with Deconvolutions](autoencoder-deconv.ipynb)
 - [Convolutional Autoencoder with Nearest-neighbor Interpolation](autoencoder-conv.ipynb)
+
+## General Adversarial Networks
+
 - [General Adversarial Networks](gan.ipynb)
 - [Convolutional General Adversarial Networks](gan-conv.ipynb)
+
+## Other
+
+- [Saving and Loading Trained Models -- from TensorFlow Checkpoint Files and NumPy NPZ Archives](saving-and-reloading-models.ipynb)
