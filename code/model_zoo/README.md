@@ -13,6 +13,7 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Multilayer Perceptron](multilayer-perceptron.ipynb)
 - [Multilayer Perceptron with Dropout](multilayer-perceptron-dropout.ipynb)
 - [Multilayer Perceptron with Batch Normalization](multilayer-perceptron-batchnorm.ipynb)
+- [Multilayer Perceptron with Backpropagation from Scratch](multilayer-perceptron-lowlevel.ipynb)
 - [Convolutional Neural Network](convnet.ipynb)
 - [Convolutional Neural Network VGG-16](convnet-vgg16.ipynb)
 
