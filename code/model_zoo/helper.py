@@ -15,6 +15,8 @@ import os
 import sys
 import pickle
 import numpy as np
+import scipy.misc
+from tensorflow.examples.tutorials.mnist import input_data
 
 
 def download_and_extract_cifar(target_dir,
@@ -170,3 +172,34 @@ class Cifar10Loader():
     def count_test(self):
         dct = unpickle_cifar(self.testname)
         return len(dct[b'labels'])
+
+
+def mnist_export_to_jpg(path='./'):
+    for s in ('test', 'train', 'valid'):
+        for i in range(10):
+            outpath = os.path.join(path, 'mnist_%s/%d' % (s, i))
+            if not os.path.exists(outpath):
+                os.makedirs(outpath)
+
+    np.random.seed(123)
+
+    mnist = input_data.read_data_sets("./", one_hot=False)
+
+    batch_x, batch_y = mnist.train.next_batch(50000)
+    cnt = -1
+    for data, label in zip(batch_x[:45000], batch_y[:45000]):
+        cnt += 1
+        outpath = os.path.join(path, 'mnist_train/%d/%d.jpg' % (label, cnt))
+        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+
+    for data, label in zip(batch_x[45000:], batch_y[45000:]):
+        cnt += 1
+        outpath = os.path.join(path, 'mnist_valid/%d/%d.jpg' % (label, cnt))
+        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+
+    batch_x, batch_y = mnist.test.next_batch(10000)
+    cnt = -1
+    for data, label in zip(batch_x, batch_y):
+        cnt += 1
+        outpath = os.path.join(path, 'mnist_test/%d/%d.jpg' % (label, cnt))
+        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
