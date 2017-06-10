@@ -19,7 +19,7 @@ def leaky_relu(x, alpha=0.0001):
 
 def selu(x):
     # Based on "Self-normalizing networks"(SNNs)
-    # Günter Klambauer, Thomas Unterthiner, Andreas Mayr, Sepp Hochreiter
+    # Guenter Klambauer, Thomas Unterthiner, Andreas Mayr, Sepp Hochreiter
     # https://arxiv.org/abs/1706.02515
     with ops.name_scope('selu') as scope:
         alpha = 1.6732632423543772848170429916717
