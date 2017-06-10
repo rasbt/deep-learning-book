@@ -12,3 +12,5 @@
 
 from .layers import conv_layer
 from .layers import fc_layer
+from .activations import leaky_relu
+from .activations import selu
