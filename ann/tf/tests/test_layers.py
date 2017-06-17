@@ -11,8 +11,8 @@
 import unittest
 import tensorflow as tf
 import numpy as np
-from ann.tf import conv_layer
-from ann.tf import fc_layer
+from ann.tf import conv2d
+from ann.tf import fully_connected
 from tensorflow.examples.tutorials.mnist import input_data
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
@@ -33,20 +33,18 @@ class TestLayers(unittest.TestCase):
             y = tf.placeholder(tf.float32, shape=[None, 10])
 
             # Neural network architecture
-            conv1 = conv_layer(input=x_image,
-                               input_channels=1,
-                               output_channels=32,
-                               seed=SEED)
+            conv1 = conv2d(input_tensor=x_image,
+                           output_channels=32,
+                           seed=SEED)
             pool1 = tf.nn.max_pool(conv1,
                                    ksize=[1, 2, 2, 1],
                                    strides=[1, 2, 2, 1],
                                    padding='SAME')
             cur_dim = 28/2
 
-            conv2 = conv_layer(input=pool1,
-                               input_channels=32,
-                               output_channels=64,
-                               seed=SEED)
+            conv2 = conv2d(input_tensor=pool1,
+                           output_channels=64,
+                           seed=SEED)
             pool2 = tf.nn.max_pool(conv2,
                                    ksize=[1, 2, 2, 1],
                                    strides=[1, 2, 2, 1],
@@ -56,14 +54,12 @@ class TestLayers(unittest.TestCase):
             fc_features = cur_dim * cur_dim * 64
             flattened = tf.reshape(pool2, [-1, fc_features])
 
-            fc1 = fc_layer(input=flattened,
-                           input_nodes=fc_features,
-                           output_nodes=1024,
-                           seed=SEED)
-            fc2 = fc_layer(input=fc1,
-                           input_nodes=1024,
-                           output_nodes=10,
-                           seed=SEED)
+            fc1 = fully_connected(input_tensor=flattened,
+                                  output_nodes=1024,
+                                  seed=SEED)
+            fc2 = fully_connected(input_tensor=fc1,
+                                  output_nodes=10,
+                                  seed=SEED)
 
             # Loss function
             cross_entropy = tf.reduce_mean(
@@ -92,7 +88,7 @@ class TestLayers(unittest.TestCase):
 
                 sess.run([train_step], feed_dict=feed_dict)
 
-        assert train_acc[0] == np.array(0.1, dtype=np.float32)
+        assert train_acc[0] == np.array(0.04, dtype=np.float32)
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@
 #
 # License: MIT
 
-from .layers import conv_layer
-from .layers import fc_layer
+from .layers import conv2d
+from .layers import fully_connected
 from .activations import leaky_relu
 from .activations import selu
