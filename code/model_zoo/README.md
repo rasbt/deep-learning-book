@@ -32,3 +32,4 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 
 - [Saving and Loading Trained Models -- from TensorFlow Checkpoint Files and NumPy NPZ Archives](saving-and-reloading-models.ipynb)
 - [Chunking an Image Dataset for Minibatch Training using NumPy NPZ Archives](image-data-chunking-npz.ipynb)
+- [Storing an Image Dataset for Minibatch Training using HDF5](image-data-chunking-hdf5.ipynb)

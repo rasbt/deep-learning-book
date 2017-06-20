@@ -62,7 +62,7 @@ def unpickle_cifar(fpath):
 
 
 class Cifar10Loader():
-    def __init__(self, cifar_path, normalize=False, 
+    def __init__(self, cifar_path, normalize=False,
                  channel_mean_center=False, zero_center=False):
         self.cifar_path = cifar_path
         self.batchnames = [os.path.join(self.cifar_path, f)
@@ -75,11 +75,11 @@ class Cifar10Loader():
         self.channel_mean_center = channel_mean_center
         self.zero_center = zero_center
         self.train_mean = None
-  
+
     def _compute_train_mean(self):
-        
+
         cum_mean = np.zeros((1, 1, 1, 3))
-        
+
         for batch in self.batchnames:
             dct = unpickle_cifar(batch)
             dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
@@ -87,15 +87,15 @@ class Cifar10Loader():
                 dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
             mean = dct[b'data'].mean(axis=(0, 1, 2), keepdims=True)
             cum_mean += mean
-        
+
         self.train_mean = cum_mean / len(self.batchnames)
-        
+
         return None
-               
+
     def load_test(self, onehot=True):
         dct = unpickle_cifar(self.testname)
         dct[b'labels'] = np.array(dct[b'labels'], dtype=int)
-        
+
         dct[b'data'] = dct[b'data'].reshape(
             dct[b'data'].shape[0], 3, 32, 32).transpose(0, 2, 3, 1)
 
@@ -106,18 +106,18 @@ class Cifar10Loader():
         if self.normalize:
             dct[b'data'] = dct[b'data'].astype(np.float32)
             dct[b'data'] = dct[b'data'] / 255.0
-       
+
         if self.channel_mean_center:
             if self.train_mean is None:
                 self._compute_train_mean()
-            dct[b'data'] -= self.train_mean   
-            
+            dct[b'data'] -= self.train_mean
+
         if self.zero_center:
             if self.normalize:
                 dct[b'data'] -= .5
             else:
                 dct[b'data'] -= 127.5
-            
+
         return dct[b'data'], dct[b'labels']
 
     def load_train_epoch(self, batch_size=50, onehot=True,
@@ -134,7 +134,7 @@ class Cifar10Loader():
             if onehot:
                 dct[b'labels'] = (np.arange(10) ==
                                   dct[b'labels'][:, None]).astype(int)
-                
+
             if self.normalize:
                 dct[b'data'] = dct[b'data'].astype(np.float32)
                 dct[b'data'] = dct[b'data'] / 255.0
@@ -143,13 +143,13 @@ class Cifar10Loader():
                 if self.train_mean is None:
                     self._compute_train_mean()
                 dct[b'data'] -= self.train_mean
-            
+
             if self.zero_center:
                 if self.normalize:
                     dct[b'data'] -= .5
                 else:
                     dct[b'data'] -= 127.5
-                    
+
             arrays = [dct[b'data'], dct[b'labels']]
             del dct
             indices = np.arange(arrays[0].shape[0])
@@ -180,8 +180,6 @@ def mnist_export_to_jpg(path='./'):
             outpath = os.path.join(path, 'mnist_%s/%d' % (s, i))
             if not os.path.exists(outpath):
                 os.makedirs(outpath)
-
-    np.random.seed(123)
 
     mnist = input_data.read_data_sets("./", one_hot=False)
 
