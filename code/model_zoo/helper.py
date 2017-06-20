@@ -181,8 +181,6 @@ def mnist_export_to_jpg(path='./'):
             if not os.path.exists(outpath):
                 os.makedirs(outpath)
 
-    np.random.seed(123)
-
     mnist = input_data.read_data_sets("./", one_hot=False)
 
     batch_x, batch_y = mnist.train.next_batch(50000)
