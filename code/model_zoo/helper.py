@@ -10,6 +10,8 @@
 
 
 from urllib.request import urlretrieve
+import shutil
+import glob
 import tarfile
 import os
 import sys
@@ -175,29 +177,57 @@ class Cifar10Loader():
 
 
 def mnist_export_to_jpg(path='./'):
-    for s in ('test', 'train', 'valid'):
-        for i in range(10):
-            outpath = os.path.join(path, 'mnist_%s/%d' % (s, i))
-            if not os.path.exists(outpath):
-                os.makedirs(outpath)
 
     mnist = input_data.read_data_sets("./", one_hot=False)
 
     batch_x, batch_y = mnist.train.next_batch(50000)
     cnt = -1
-    for data, label in zip(batch_x[:45000], batch_y[:45000]):
-        cnt += 1
-        outpath = os.path.join(path, 'mnist_train/%d/%d.jpg' % (label, cnt))
-        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
 
-    for data, label in zip(batch_x[45000:], batch_y[45000:]):
-        cnt += 1
-        outpath = os.path.join(path, 'mnist_valid/%d/%d.jpg' % (label, cnt))
-        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+    def remove_incomplete_existing(path_prefix, expect_files):
+        dir_path = os.path.join(path, 'mnist_%s' % path_prefix)
 
-    batch_x, batch_y = mnist.test.next_batch(10000)
-    cnt = -1
-    for data, label in zip(batch_x, batch_y):
-        cnt += 1
-        outpath = os.path.join(path, 'mnist_test/%d/%d.jpg' % (label, cnt))
-        scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+        is_empty = False
+        if not os.path.exists(dir_path):
+            for i in range(10):
+                outpath = os.path.join(path, dir_path, str(i))
+                if not os.path.exists(outpath):
+                    os.makedirs(outpath)
+            is_empty = True
+        else:
+            num_existing_files = len(glob.glob('%s/*/*.jpg' % dir_path))
+            if num_existing_files > 0 and num_existing_files < expect_files:
+                shutil.rmtree(dir_path)
+                is_empty = True
+                for i in range(10):
+                    outpath = os.path.join(path, dir_path, str(i))
+                    if not os.path.exists(outpath):
+                        os.makedirs(outpath)
+        return is_empty
+
+    is_empty = remove_incomplete_existing(path_prefix='train',
+                                          expect_files=45000)
+    if is_empty:
+        for data, label in zip(batch_x[:45000], batch_y[:45000]):
+            cnt += 1
+            outpath = os.path.join(path, 'mnist_train/%d/%05d.jpg' %
+                                   (label, cnt))
+            scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+
+    is_empty = remove_incomplete_existing(path_prefix='valid',
+                                          expect_files=5000)
+    if is_empty:
+        for data, label in zip(batch_x[45000:], batch_y[45000:]):
+            cnt += 1
+            outpath = os.path.join(path, 'mnist_valid/%d/%05d.jpg' %
+                                   (label, cnt))
+            scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
+
+    is_empty = remove_incomplete_existing(path_prefix='test',
+                                          expect_files=10000)
+    if is_empty:
+        batch_x, batch_y = mnist.test.next_batch(10000)
+        cnt = -1
+        for data, label in zip(batch_x, batch_y):
+            cnt += 1
+            outpath = os.path.join(path, 'mnist_test/%d/%05d.jpg' % (label, cnt))
+            scipy.misc.imsave(outpath, (data*255).reshape(28, 28))
