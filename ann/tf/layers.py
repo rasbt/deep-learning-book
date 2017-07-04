@@ -41,6 +41,66 @@ def conv2d(input_tensor, output_channels,
         return act
 
 
+def deconv2d_layer(inputs,
+                   scope,
+                   output_channels,
+                   weights_initializer=None,
+                   bias_initializer=None,
+                   kernel_size=(3, 3),
+                   strides=(2, 2),
+                   activation=None,
+                   padding='SAME'):
+    with tf.variable_scope(scope):
+        static_input_shape = inputs.get_shape().as_list()
+        dynamic_input_shape = tf.shape(inputs)
+
+        # workaround for dynamic batch sizes using a symbolic tensor
+        batch_size = dynamic_input_shape[0]
+
+        if weights_initializer is None:
+            weights_initializer = tf.truncated_normal_initializer(stddev=0.1)
+
+        if bias_initializer is None:
+            bias_initializer = tf.constant_initializer(0.0)
+
+        weights = tf.get_variable(name='weights',
+                                  shape=[kernel_size[0],
+                                         kernel_size[1],
+                                         output_channels,
+                                         static_input_shape[3]],
+                                  initializer=weights_initializer)
+
+        biases = tf.get_variable(name='biases',
+                                 shape=(output_channels,),
+                                 initializer=bias_initializer)
+
+        if padding not in ('SAME', 'VALID'):
+            raise ValueError('Padding must be "SAME" or "VALID"')
+
+        if padding == 'SAME':
+            out_height = dynamic_input_shape[1] * strides[0]
+            out_width = dynamic_input_shape[2] * strides[1]
+        elif padding == 'VALID':
+            out_height = ((dynamic_input_shape[1] - 1) * strides[0] +
+                          kernel_size[0])
+            out_width = ((dynamic_input_shape[2] - 1) * strides[1] +
+                         kernel_size[1])
+
+        out_shape = tf.stack([batch_size, out_height,
+                              out_width, output_channels])
+
+        deconv = tf.nn.conv2d_transpose(value=inputs,
+                                        filter=weights,
+                                        output_shape=out_shape,
+                                        strides=(1, strides[0], strides[1], 1),
+                                        padding=padding)
+        deconv = tf.nn.bias_add(deconv, biases)
+
+        if activation is not None:
+            deconv = activation(deconv)
+    return deconv
+
+
 def fully_connected(input_tensor, output_nodes,
                     activation=None, seed=None,
                     name='fully_connected'):
