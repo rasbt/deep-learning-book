@@ -19,7 +19,7 @@ Repository for the book *Introduction to Artificial Neural Networks and Deep Lea
 
 - PDF and ebook versions of the book will be available from [Leanpub](https://leanpub.com/ann-and-deeplearning).
 
-[![Deep Learning Book](images/ann-and-deeplearning-cover.jpg)](https://leanpub.com/ann-and-deeplearning)
+[![Deep Learning Book](images/ann-and-deeplearning-cover.png)](https://leanpub.com/ann-and-deeplearning)
 
 
 ISBN-10: [TBA]  
