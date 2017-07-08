@@ -17,6 +17,10 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Convolutional Neural Network](convnet.ipynb)
 - [Convolutional Neural Network VGG-16](convnet-vgg16.ipynb)
 
+## Metric Learning
+
+- [Siamese Network with Multilayer Perceptrons](siamese-1.ipynb)
+
 ## Autoencoders
 
 - [Autoencoder](autoencoder.ipynb)
