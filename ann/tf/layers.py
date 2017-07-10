@@ -42,8 +42,8 @@ def conv2d(input_tensor, output_channels,
 
 
 def deconv2d_layer(inputs,
-                   scope,
                    output_channels,
+                   scope,
                    weights_initializer=None,
                    bias_initializer=None,
                    kernel_size=(3, 3),
@@ -97,7 +97,7 @@ def deconv2d_layer(inputs,
         deconv = tf.nn.bias_add(deconv, biases)
 
         if activation is not None:
-            deconv = activation(deconv)
+            deconv = activation(deconv, name='activation')
     return deconv
 
 
@@ -118,5 +118,5 @@ def fully_connected(input_tensor, output_nodes,
 
         act = tf.matmul(input_tensor, weights) + biases
         if activation is not None:
-            act = activation(act)
+            act = activation(act, name='activation')
         return act
