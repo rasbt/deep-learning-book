@@ -11,7 +11,7 @@ matrix:
         - python: 3.6
           env: LATEST="true" NOTEBOOKS="false" DOCTESTS="true"
         - python: 3.6
-          env: LATEST="false" NUMPY_VERSION="1.11" TENSORFLOW_VERSION="1.1.0" NOTEBOOKS="true" DOCTESTS="false"
+          env: LATEST="false" NUMPY_VERSION="1.11" TENSORFLOW_VERSION="1.2.0" NOTEBOOKS="true" DOCTESTS="false"
         - python: 3.5
           env: LATEST="true" NOTEBOOKS="true" DOCTESTS="false"
 install:
