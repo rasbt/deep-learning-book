@@ -38,4 +38,4 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Chunking an Image Dataset for Minibatch Training using NumPy NPZ Archives](image-data-chunking-npz.ipynb)
 - [Storing an Image Dataset for Minibatch Training using HDF5](image-data-chunking-hdf5.ipynb)
 - [Using Input Pipelines to Read Data from TFRecords Files](tfrecords.ipynb)
-- [Using Input Pipelines to Read Data from TFRecords Files](file-queues.ipynb)
+- [Using Queue Runners to Feed Images Directly from Disk](file-queues.ipynb)
