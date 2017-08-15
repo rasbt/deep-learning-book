@@ -30,35 +30,33 @@ Paperback: est. 2018
 
 ## Manuscripts / Early Access Drafts
 
-- Introduction
+- 01 - Introduction
 
-- The Perceptron [[Code Notebook](code/ch02_perceptron/ch02_perceptron.ipynb)]
+- 02 - The Perceptron [[Code Notebook](code/ch02_perceptron/ch02_perceptron.ipynb)]
 
-- Optimizing Cost Functions with Gradient Descent
+- 03 - Optimizing Cost Functions with Gradient Descent
 
-- Logistic Regression and Softmax Regression
+- 04 - Logistic Regression and Softmax Regression
 
-- From Softmax Regression to Multi-layer Perceptrons
+- 05 - From Softmax Regression to Multilayer Perceptrons
 
-- Cross Validation and Performance Metrics
+- 06 - Cross Validation and Performance Metrics
 
-- Regularization in Neural Networks
+- 07 - Regularization in Neural Networks
 
-- Learning Rates and Weight Initialization
+- 08 - Learning Rates and Weight Initialization
 
-- Convolutional Neural Networks
+- 09 - Convolutional Neural Networks
 
-- Recurrent Neural Networks
+- 10 - Recurrent Neural Networks
 
-- Echostate Networks
+- 11 - Autoencoders
 
-- Autoencoders
+- 12 - General Adverserial Neural Networks
 
-- General Adverserial Neural Networks
+- 13 - Deep Generative Models
 
-- Deep Generative Models
-
-- Reinforcement Learning
+- 14 - Reinforcement Learning
 
 - Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.epub)]
 
