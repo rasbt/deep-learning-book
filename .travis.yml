@@ -17,8 +17,8 @@ matrix:
 install:
     - sudo apt-get update
     - source .travis/install_travis_env.sh
-script:
-    - bash .travis/run_travis_tests.sh
+#script:
+#    - bash .travis/run_travis_tests.sh
 #after_success:
 #    - if [[ "${COVERAGE}" == "true" ]]; then coveralls; codecov; else echo "failed"; fi
 notifications:
