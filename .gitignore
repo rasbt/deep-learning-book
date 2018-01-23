@@ -11,6 +11,10 @@ checkpoint
 code/*/*.data-?????-of-?????
 code/*/*.index
 code/*/*.meta
+code/model_zoo/tensorflow_ipynb/*.data-?????-of-?????
+code/model_zoo/tensorflow_ipynb/*.index
+code/model_zoo/tensorflow_ipynb/*.meta
+code/model_zoo/tensorflow_ipynb/cifar-10/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
