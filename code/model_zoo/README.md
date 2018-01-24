@@ -39,3 +39,4 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - [Storing an Image Dataset for Minibatch Training using HDF5](tensorflow_ipynb/image-data-chunking-hdf5.ipynb)
 - [Using Input Pipelines to Read Data from TFRecords Files](tensorflow_ipynb/tfrecords.ipynb)
 - [Using Queue Runners to Feed Images Directly from Disk](tensorflow_ipynb/file-queues.ipynb)
+- [Using TensorFlow's Dataset API](tensorflow_ipynb/dataset-api.ipynb)
