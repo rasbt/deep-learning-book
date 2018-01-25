@@ -32,7 +32,11 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 - General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan.ipynb)]
 - Convolutional General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan-conv.ipynb)]
 
-## TensorFlow Usage
+## PyTorch Workflows
+
+- [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA]
+
+## TensorFlow Workflows
 
 - [Saving and Loading Trained Models -- from TensorFlow Checkpoint Files and NumPy NPZ Archives](tensorflow_ipynb/saving-and-reloading-models.ipynb)
 - [Chunking an Image Dataset for Minibatch Training using NumPy NPZ Archives](tensorflow_ipynb/image-data-chunking-npz.ipynb)
