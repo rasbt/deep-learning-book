@@ -34,7 +34,7 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 
 ## PyTorch Workflows
 
-- [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA]
+- [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA](pytorch_ipynb/custom-data-loader-celeba.ipynb)
 
 ## TensorFlow Workflows
 
