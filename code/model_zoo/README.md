@@ -35,7 +35,7 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 ## PyTorch Workflows
 
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA](pytorch_ipynb/custom-data-loader-celeba.ipynb)
-- [Getting gradients of an intermediate variable in PyTorch](pytorch_ipynb/manual-gradients.ipynb)
+- [Getting Gradients of an Intermediate Variable in PyTorch](pytorch_ipynb/manual-gradients.ipynb)
 
 ## TensorFlow Workflows
 
