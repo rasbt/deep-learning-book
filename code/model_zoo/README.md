@@ -1,5 +1,4 @@
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-1.3.0-blue.svg)
 
 # Model Zoo
 
