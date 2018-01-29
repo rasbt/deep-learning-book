@@ -22,7 +22,7 @@ A collection of standalone TensorFlow models in Jupyter Notebooks
 
 ## Autoencoders
 
-- Autoencoder [[TensorFlow](tensorflow_ipynb/autoencoder.ipynb)]
+- Autoencoder [[TensorFlow](tensorflow_ipynb/autoencoder.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder.ipynb)]
 - Convolutional Autoencoder with Deconvolutions [[TensorFlow](tensorflow_ipynb/autoencoder-deconv.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)]
 
