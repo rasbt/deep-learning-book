@@ -2,7 +2,7 @@
 
 # Model Zoo
 
-A collection of standalone TensorFlow models in Jupyter Notebooks
+A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Classifiers
 
