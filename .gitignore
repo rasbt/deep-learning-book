@@ -2,7 +2,7 @@
 *ubyte.gz
 *archive.ics.uci.edu*
 code/model_zoo/cifar-10
-code/moldel_zoo/pytorch_ipynb/data
+code/model_zoo/pytorch_ipynb/data
 
 # Temporary OS files
 .DS_Store
