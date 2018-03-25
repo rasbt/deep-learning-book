@@ -1,4 +1,6 @@
 # Datasets
+*.npz
+*.npy
 *ubyte.gz
 *archive.ics.uci.edu*
 code/model_zoo/cifar-10
