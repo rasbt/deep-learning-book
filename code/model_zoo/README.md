@@ -6,7 +6,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Classifiers
 
-- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch](pytorch_ipynb/perceptron.ipynb)]
+- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch 0.4.0](pytorch_ipynb/perceptron.ipynb)]
 - Logistic Regression [[TensorFlow](tensorflow_ipynb/logistic-regression.ipynb)] [[PyTorch](pytorch_ipynb/logistic-regression.ipynb)]
 - Softmax Regression (Multinomial Logistic Regression) [[TensorFlow](tensorflow_ipynb/softmax-regression.ipynb)][[PyTorch](pytorch_ipynb/softmax-regression.ipynb)]
 - Multilayer Perceptron [[TensorFlow](tensorflow_ipynb/multilayer-perceptron.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron.ipynb)]
