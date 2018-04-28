@@ -6,12 +6,12 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Classifiers
 
-- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch 0.4.0](pytorch_ipynb/perceptron.ipynb)]
-- Logistic Regression [[TensorFlow](tensorflow_ipynb/logistic-regression.ipynb)] [[PyTorch 0.4.0](pytorch_ipynb/logistic-regression.ipynb)]
-- Softmax Regression (Multinomial Logistic Regression) [[TensorFlow](tensorflow_ipynb/softmax-regression.ipynb)][[PyTorch 0.4.0](pytorch_ipynb/softmax-regression.ipynb)]
-- Multilayer Perceptron [[TensorFlow](tensorflow_ipynb/multilayer-perceptron.ipynb)] [[PyTorch 0.4.0](pytorch_ipynb/multilayer-perceptron.ipynb)]
-- Multilayer Perceptron with Dropout [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-dropout.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron-dropout.ipynb)]
-- Multilayer Perceptron with Batch Normalization [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-batchnorm.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron-batchnorm.ipynb)]
+- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch 0.4](pytorch_ipynb/perceptron.ipynb)]
+- Logistic Regression [[TensorFlow](tensorflow_ipynb/logistic-regression.ipynb)] [[PyTorch 0.4](pytorch_ipynb/logistic-regression.ipynb)]
+- Softmax Regression (Multinomial Logistic Regression) [[TensorFlow](tensorflow_ipynb/softmax-regression.ipynb)][[PyTorch 0.4](pytorch_ipynb/softmax-regression.ipynb)]
+- Multilayer Perceptron [[TensorFlow](tensorflow_ipynb/multilayer-perceptron.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron.ipynb)]
+- Multilayer Perceptron with Dropout [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-dropout.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron-dropout.ipynb)]
+- Multilayer Perceptron with Batch Normalization [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-batchnorm.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron-batchnorm.ipynb)]
 - Multilayer Perceptron with Backpropagation from Scratch [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-lowlevel.ipynb)]
 
 #### Convolutional Classifiers
