@@ -15,7 +15,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - Multilayer Perceptron with Backpropagation from Scratch [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-lowlevel.ipynb)]
 
 #### Convolutional Classifiers
-- Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet.ipynb)]
+- Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet.ipynb)]
 - Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
 - Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch](pytorch_ipynb/convnet-vgg16.ipynb)]
 - Convolutional ResNet and Residual Blocks [[PyTorch](pytorch_ipynb/resnet-ex-1.ipynb)]
