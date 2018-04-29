@@ -16,8 +16,8 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 #### Convolutional Classifiers
 - Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet.ipynb)]
-- Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
-- Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch](pytorch_ipynb/convnet-vgg16.ipynb)]
+- Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet-he-init.ipynb)]
+- Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet-vgg16.ipynb)]
 - Convolutional ResNet and Residual Blocks [[PyTorch](pytorch_ipynb/resnet-ex-1.ipynb)]
 
 ## Metric Learning
@@ -30,7 +30,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - Convolutional Autoencoder with Deconvolutions [[TensorFlow](tensorflow_ipynb/autoencoder-deconv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-deconv.ipynb)]
 - Convolutional Autoencoder with Deconvolutions (without pooling operations) [[PyTorch](pytorch_ipynb/autoencoder-deconv-2.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-conv.ipynb)]
-- Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
+- Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
 - Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-var.ipynb)]
 
 ## General Adversarial Networks
