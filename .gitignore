@@ -1,10 +1,15 @@
 # Datasets
+list_attr_celeba.txt 
+*.zip
 *.npz
 *.npy
 *ubyte.gz
 *archive.ics.uci.edu*
 code/model_zoo/cifar-10
 code/model_zoo/pytorch_ipynb/data
+
+# Binary PyTorch models
+*.pt
 
 # Temporary OS files
 .DS_Store
