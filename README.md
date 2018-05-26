@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/rasbt/deep-learning-book.svg?branch=master)](https://travis-ci.org/rasbt/deep-learning-book)
 ![Python 2.7](https://img.shields.io/badge/Python-2.7-blue.svg)
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-blue.svg)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-1.3.0-blue.svg)
