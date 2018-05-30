@@ -10,7 +10,7 @@ Repository for the book *Introduction to Artificial Neural Networks and Deep Lea
 
 ---
 
-**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in [*Python Machine Learning*](https://github.com/rasbt/python-machine-learning-book) and implement deep learning algorithms in [TensorFlow](https://www.tensorflow.org).**
+**Deep learning is not just the talk of the town among tech folks. Deep learning allows us to tackle complex problems, training artificial neural networks to recognize complex patterns for image and speech recognition. In this book, we'll continue where we left off in [*Python Machine Learning*](https://github.com/rasbt/python-machine-learning-book) and implement deep learning algorithms in [PyTorch](https://pytorch.org).**
 
 ---
 
@@ -67,7 +67,7 @@ Paperback: est. 2018
 
 - Appendix E: Python Setup
 
-- Appendix F: Introduction to NumPy [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.epub)] [[Code Notebook](code/appendix_f_numpy-intro/appendix_f_numpy-intro.ipynb)]
+- Appendix F: Introduction to NumPy [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.pdf)] [[Code Notebook](code/appendix_f_numpy-intro/appendix_f_numpy-intro.ipynb)]
 
 - Appendix G: TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[EPUB](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.epub)] [[Code Notebook](code/appendix_g_tensorflow-basics/appendix_g_tensorflow-basics.ipynb)]
 
