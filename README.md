@@ -1,6 +1,4 @@
-![Python 2.7](https://img.shields.io/badge/Python-2.7-blue.svg)
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-1.3.0-blue.svg)
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 [![Mailing List](https://img.shields.io/badge/-Mailing%20List-lightgrey.svg)](https://groups.google.com/forum/#!forum/ann-and-dl-book)
 
