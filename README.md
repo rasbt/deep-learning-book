@@ -31,7 +31,7 @@ Paperback: est. 2018
 
 - 01 - Introduction
 
-- 02 - The Perceptron [[Code Notebook](code/ch02_perceptron/ch02_perceptron.ipynb)]
+- 02 - The Perceptron 
 
 - 03 - Optimizing Cost Functions with Gradient Descent
 
@@ -57,6 +57,8 @@ Paperback: est. 2018
 
 - 14 - Reinforcement Learning
 
+#### Supporting Material
+
 - Appendix A: Mathematical Notation [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_a_math_notation.pdf)]
 
 - Appendix B: Algebra Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_b_algebra.pdf)]
@@ -65,17 +67,23 @@ Paperback: est. 2018
 
 - Appendix D: Calculus and Differentiation Primer [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_d_calculus.pdf)]
 
-- Appendix E: Python Setup
+- Appendix E: Probability Theory Overview
 
-- Appendix F: Introduction to NumPy [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.pdf)] [[Code Notebook](code/appendix_f_numpy-intro/appendix_f_numpy-intro.ipynb)]
+- Appendix F: Notational Conventions Reference
 
-- Appendix G: PyTorch Basics 
+- Appendix G: Python Setup
 
-- Appendix G (alt.): TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[Code Notebook](code/appendix_g_tensorflow-basics/appendix_g_tensorflow-basics.ipynb)]
+- Appendix H: Introduction to NumPy [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_numpy-intro.pdf)] [[Code Notebook](code/appendix_h_numpy-intro/appendix_numpy-intro.ipynb)]
 
-- Appendix H: Cloud Computing [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_h_cloud-computing.pdf)]
+- Appendix I: PyTorch Basics 
 
-- [Model Zoo](code/model_zoo): A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks
+- Appendix I (alt.): TensorFlow Basics [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_g_tensorflow.pdf)] [[Code Notebook](code/_old-material/appendix_tensorflow-basics/appendix_tensorflow-basics.ipynb)]
+
+- Appendix J: Cloud Computing [[PDF](https://sebastianraschka.com/pdf/books/dlb/appendix_cloud-computing.pdf)]
+
+#### Model Zoo
+
+- **[Model Zoo: A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks](code/model_zoo)**
 
 ---
 
