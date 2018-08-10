@@ -40,7 +40,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Tips and Tricks
 
-- Cyclic Learning Rate [[PyTorch](pytorch_ipynb/learning-rate-cyclic.ipynb)]
+- Cyclical Learning Rate [[PyTorch](pytorch_ipynb/cyclical-learning-rate.ipynb)]
 
 ## PyTorch Workflows
 
