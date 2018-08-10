@@ -6,19 +6,19 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Classifiers
 
-- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch 0.4](pytorch_ipynb/perceptron.ipynb)]
-- Logistic Regression [[TensorFlow](tensorflow_ipynb/logistic-regression.ipynb)] [[PyTorch 0.4](pytorch_ipynb/logistic-regression.ipynb)]
-- Softmax Regression (Multinomial Logistic Regression) [[TensorFlow](tensorflow_ipynb/softmax-regression.ipynb)] [[PyTorch 0.4](pytorch_ipynb/softmax-regression.ipynb)]
-- Multilayer Perceptron [[TensorFlow](tensorflow_ipynb/multilayer-perceptron.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron.ipynb)]
-- Multilayer Perceptron with Dropout [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-dropout.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron-dropout.ipynb)]
-- Multilayer Perceptron with Batch Normalization [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-batchnorm.ipynb)] [[PyTorch 0.4](pytorch_ipynb/multilayer-perceptron-batchnorm.ipynb)]
+- Perceptron [[TensorFlow](tensorflow_ipynb/perceptron.ipynb)] [[PyTorch](pytorch_ipynb/perceptron.ipynb)]
+- Logistic Regression [[TensorFlow](tensorflow_ipynb/logistic-regression.ipynb)] [[PyTorch](pytorch_ipynb/logistic-regression.ipynb)]
+- Softmax Regression (Multinomial Logistic Regression) [[TensorFlow](tensorflow_ipynb/softmax-regression.ipynb)] [[PyTorch](pytorch_ipynb/softmax-regression.ipynb)]
+- Multilayer Perceptron [[TensorFlow](tensorflow_ipynb/multilayer-perceptron.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron.ipynb)]
+- Multilayer Perceptron with Dropout [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-dropout.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron-dropout.ipynb)]
+- Multilayer Perceptron with Batch Normalization [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-batchnorm.ipynb)] [[PyTorch](pytorch_ipynb/multilayer-perceptron-batchnorm.ipynb)]
 - Multilayer Perceptron with Backpropagation from Scratch [[TensorFlow](tensorflow_ipynb/multilayer-perceptron-lowlevel.ipynb)]
 
 #### Convolutional Classifiers
-- Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet.ipynb)]
-- Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet-he-init.ipynb)]
-- Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch 0.4](pytorch_ipynb/convnet-vgg16.ipynb)]
-- Convolutional ResNet and Residual Blocks [[PyTorch 0.4](pytorch_ipynb/resnet-ex-1.ipynb)]
+- Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet.ipynb)]
+- Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
+- Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch](pytorch_ipynb/convnet-vgg16.ipynb)]
+- Convolutional ResNet and Residual Blocks [[PyTorch](pytorch_ipynb/resnet-ex-1.ipynb)]
 
 ## Metric Learning
 
@@ -26,19 +26,23 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Autoencoders
 
-- Autoencoder [[TensorFlow](tensorflow_ipynb/autoencoder.ipynb)] [[PyTorch 0.4](pytorch_ipynb/autoencoder.ipynb)]
-- Convolutional Autoencoder with Deconvolutions [[TensorFlow](tensorflow_ipynb/autoencoder-deconv.ipynb)] [[PyTorch 0.4](pytorch_ipynb/autoencoder-deconv.ipynb)]
-- Convolutional Autoencoder with Deconvolutions (without pooling operations) [[PyTorch 0.4](pytorch_ipynb/autoencoder-deconv-2.ipynb)]
-- Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)] [[PyTorch 0.4](pytorch_ipynb/autoencoder-conv.ipynb)]
-- Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch 0.4](pytorch_ipynb/autoencoder-conv-2.ipynb)]
-- Variational Autoencoder [[PyTorch 0.4](pytorch_ipynb/autoencoder-var.ipynb)]
+- Autoencoder [[TensorFlow](tensorflow_ipynb/autoencoder.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder.ipynb)]
+- Convolutional Autoencoder with Deconvolutions [[TensorFlow](tensorflow_ipynb/autoencoder-deconv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-deconv.ipynb)]
+- Convolutional Autoencoder with Deconvolutions (without pooling operations) [[PyTorch](pytorch_ipynb/autoencoder-deconv-2.ipynb)]
+- Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-conv.ipynb)]
+- Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
+- Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-var.ipynb)]
 
 ## General Adversarial Networks
 
 - General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan.ipynb)]
 - Convolutional General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan-conv.ipynb)]
 
-## PyTorch 0.4 Workflows
+## Tips and Tricks
+
+- Cyclic Learning Rate [[PyTorch](pytorch_ipynb/learning-rate-cyclic.ipynb)]
+
+## PyTorch Workflows
 
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- CSV files converted to HDF5](pytorch_ipynb/custom-data-loader-csv.ipynb)
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA](pytorch_ipynb/custom-data-loader-celeba.ipynb)
