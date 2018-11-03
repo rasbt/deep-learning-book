@@ -1,5 +1,8 @@
 # Datasets
 list_attr_celeba.txt 
+list_eval_partition.txt
+img_align_celeba
+*.csv
 *.zip
 *.npz
 *.npy
