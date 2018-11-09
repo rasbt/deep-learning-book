@@ -45,6 +45,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - Convolutional Autoencoder with Deconvolutions (without pooling operations) [[PyTorch](pytorch_ipynb/autoencoder-deconv-2.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-conv.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
+- Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on Quickdraw [[PyTorch](pytorch_ipynb/autoencoder-conv-quickdraw-1.ipynb)]
 - Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-var.ipynb)]
 
 ## General Adversarial Networks
