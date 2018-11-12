@@ -64,6 +64,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- CSV files converted to HDF5](pytorch_ipynb/custom-data-loader-csv.ipynb)
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Face Images from CelebA](pytorch_ipynb/custom-data-loader-celeba.ipynb)
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Drawings from Quickdraw](pytorch_ipynb/custom-data-loader-quickdraw.ipynb)
+- [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Drawings from the Street View House Number (SVHN) Dataset](pytorch_ipynb/custom-data-loader-svhn.ipynb)
 
 
 **Parallel Computing**
