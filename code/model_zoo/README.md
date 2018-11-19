@@ -30,8 +30,14 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 **ResNet**
 
 - Convolutional ResNet and Residual Blocks [[PyTorch](pytorch_ipynb/resnet-ex-1.ipynb)]
+- ResNet-18 Digit Classifier Trained on MNIST [[PyTorch](pytorch_ipynb/convnet-resnet18-mnist.ipynb)]
+- ResNet-18 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet18-celeba-dataparallel.ipynb)]
+- ResNet-34 Digit Classifier Trained on MNIST [[PyTorch](pytorch_ipynb/convnet-resnet34-mnist.ipynb)]
 - ResNet-34 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet34-celeba-dataparallel.ipynb)]
+- ResNet-50 Digit Classifier Trained on MNIST [[PyTorch](pytorch_ipynb/convnet-resnet50-mnist.ipynb)]
 - ResNet-50 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet50-celeba-dataparallel.ipynb)]
+- ResNet-101 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet101-celeba.ipynb)]
+- ResNet-152 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet152-celeba.ipynb)]
 
 
 ## Metric Learning
