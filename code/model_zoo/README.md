@@ -80,6 +80,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 **Other**
 
 - [Getting Gradients of an Intermediate Variable in PyTorch](pytorch_ipynb/manual-gradients.ipynb)
+- [Plotting Live Training Performance in Jupyter Notebooks with just Matplotlib](plot-jupyter-matplotlib.ipynb)
 
 ## TensorFlow Workflows
 
