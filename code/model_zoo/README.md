@@ -53,6 +53,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on Quickdraw [[PyTorch](pytorch_ipynb/autoencoder-conv-quickdraw-1.ipynb)]
 - Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-var.ipynb)]
+- Conditional Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-cvae.ipynb)]
 
 ## General Adversarial Networks
 
