@@ -19,7 +19,8 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 **Basic**
 
 - Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet.ipynb)]
-- Convolutional Neural Network with He Initialization [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
+- Convolutional Neural Network with He Initialization  [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
+- All-Convolutional Neural Network [[PyTorch](pytorch_ipynb/convnet-allconv.ipynb)]
 
 **VGG**
 
@@ -46,14 +47,26 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Autoencoders
 
+**Regular Autoencoders**
+
 - Autoencoder [[TensorFlow](tensorflow_ipynb/autoencoder.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder.ipynb)]
 - Convolutional Autoencoder with Deconvolutions [[TensorFlow](tensorflow_ipynb/autoencoder-deconv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-deconv.ipynb)]
 - Convolutional Autoencoder with Deconvolutions (without pooling operations) [[PyTorch](pytorch_ipynb/autoencoder-deconv-2.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation [[TensorFlow](tensorflow_ipynb/autoencoder-conv.ipynb)] [[PyTorch](pytorch_ipynb/autoencoder-conv.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on CelebA [[PyTorch](pytorch_ipynb/autoencoder-conv-2.ipynb)]
 - Convolutional Autoencoder with Nearest-neighbor Interpolation -- Trained on Quickdraw [[PyTorch](pytorch_ipynb/autoencoder-conv-quickdraw-1.ipynb)]
+
+**Variational Autoencoders**
+
 - Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-var.ipynb)]
-- Conditional Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-cvae.ipynb)]
+- Convolutional Variational Autoencoder [[PyTorch](pytorch_ipynb/autoencoder-cnn-var.ipynb)]
+
+**Conditional Variational Autoencoders**
+
+- Conditional Variational Autoencoder (with labels in reconstruction loss) [[PyTorch](pytorch_ipynb/autoencoder-cvae.ipynb)]
+- Conditional Variational Autoencoder (without labels in reconstruction loss) [[PyTorch](pytorch_ipynb/autoencoder-cvae_no-out-concat.ipynb)]
+- Convolutional Conditional Variational Autoencoder (with labels in reconstruction loss) [[PyTorch](pytorch_ipynb/autoencoder-cnn-cvae.ipynb)]
+- Convolutional Conditional Variational Autoencoder (without labels in reconstruction loss) [[PyTorch](pytorch_ipynb/autoencoder-cnn-cvae_no-out-concat.ipynb)]
 
 ## General Adversarial Networks
 
