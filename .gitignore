@@ -1,4 +1,9 @@
 # Datasets
+celeba_gender_attr_test.txt
+celeba_gender_attr_train.txt
+iris.h5
+test_32x32.mat
+train_32x32.mat
 code/model_zoo/pytorch_ipynb/svhn_cropped/
 list_attr_celeba.txt 
 list_eval_partition.txt
