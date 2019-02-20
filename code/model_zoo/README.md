@@ -94,6 +94,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 **Other**
 
+- [Sequential API and hooks](pytorch_ipynb/mlp-sequential.ipynb)
 - [Getting Gradients of an Intermediate Variable in PyTorch](pytorch_ipynb/manual-gradients.ipynb)
 - [Weight Sharing Within a Layer](pytorch_ipynb/convnet-weight-sharing.ipynb)
 - [Plotting Live Training Performance in Jupyter Notebooks with just Matplotlib](pytorch_ipynb/plot-jupyter-matplotlib.ipynb)
