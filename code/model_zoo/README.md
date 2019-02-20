@@ -70,7 +70,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## General Adversarial Networks
 
-- General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan.ipynb)]
+- General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan.ipynb)] [[PyTorch](pytorch_ipynb/gan.ipynb)]
 - Convolutional General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan-conv.ipynb)]
 
 ## Tips and Tricks
