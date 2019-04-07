@@ -24,6 +24,9 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 - Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet.ipynb)]
 - Convolutional Neural Network with He Initialization  [[PyTorch](pytorch_ipynb/convnet-he-init.ipynb)]
+
+**All Convolutional**
+
 - All-Convolutional Neural Network [[PyTorch](pytorch_ipynb/convnet-allconv.ipynb)]
 
 **VGG**
@@ -44,6 +47,9 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - ResNet-101 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet101-celeba.ipynb)]
 - ResNet-152 Gender Classifier Trained on CelebA [[PyTorch](pytorch_ipynb/convnet-resnet152-celeba.ipynb)]
 
+**Network in Network**
+
+- Network in Network CIFAR-10 Classifier [[PyTorch](pytorch_ipynb/nin-cifar10.ipynb)] 
 
 ## Metric Learning
 
