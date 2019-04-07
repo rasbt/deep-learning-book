@@ -16,6 +16,10 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ### Convolutional Classifiers
 
+**Concepts**
+
+- Replacing Fully-Connnected by Equivalent Convolutional Layers [[PyTorch](pytorch_ipynb/fc-to-conv.ipynb)]
+
 **Basic**
 
 - Convolutional Neural Network [[TensorFlow](tensorflow_ipynb/convnet.ipynb)] [[PyTorch](pytorch_ipynb/convnet.ipynb)]
