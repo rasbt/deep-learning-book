@@ -91,6 +91,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - [Using PyTorch Dataset Loading Utilities for Custom Datasets -- Drawings from the Street View House Number (SVHN) Dataset](pytorch_ipynb/custom-data-loader-svhn.ipynb)
 - [Pinned Memory](pytorch_ipynb/convnet-resnet34-cifar10-pinmem.ipynb)
 - [Standardizing Images](pytorch_ipynb/convnet-standardized.ipynb)
+- [Image Transformation Examples](pytorch_ipynb/torchvision-transform-examples.ipynb)
 
 **Parallel Computing**
 
