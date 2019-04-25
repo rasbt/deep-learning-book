@@ -29,6 +29,10 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 - All-Convolutional Neural Network [[PyTorch](pytorch_ipynb/convnet-allconv.ipynb)]
 
+**AlexNet**
+
+- AlexNet on CIFAR-10 [[PyTorch](pytorch_ipynb/convnet-alexnet-cifar10.ipynb)]
+
 **VGG**
 
 - Convolutional Neural Network VGG-16 [[TensorFlow](tensorflow_ipynb/convnet-vgg16.ipynb)] [[PyTorch](pytorch_ipynb/convnet-vgg16.ipynb)]
