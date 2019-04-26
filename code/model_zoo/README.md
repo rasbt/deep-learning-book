@@ -87,6 +87,22 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan.ipynb)] [[PyTorch](pytorch_ipynb/gan.ipynb)]
 - Convolutional General Adversarial Networks [[TensorFlow](tensorflow_ipynb/gan-conv.ipynb)]
 
+## Recurrent Neural Networks (RNNs)
+
+
+**Sentiment Analysis / Classification**
+
+- A simple single-layer RNN (IMDB) [[PyTorch](pytorch_ipynb/rnn_simple_imdb.ipynb)]
+- A simple single-layer RNN with packed sequences to ignore padding characters (IMDB) [[PyTorch](pytorch_ipynb/rnn_simple_packed_imdb.ipynb)]
+- An RNN with LSTM cells (IMDB) [[PyTorch](pytorch_ipynb/rnn_lstm_packed_imdb.ipynb)]
+- An RNN with GRU cells (IMDB) [[PyTorch](pytorch_ipynb/rnn_gru_packed_imdb.ipynb)]
+- A multilayer bi-directional RNN (IMDB) [[PyTorch](pytorch_ipynb/rnn_gru_packed_imdb.ipynb)]
+
+**Sequence-to-Sequence**
+
+- A simple character RNN to generate new text (Charles Dickens) [[PyTorch](pytorch_ipynb/rnn_lstm_bi_imdb.ipynb)]
+
+
 ## Tips and Tricks
 
 - Cyclical Learning Rate [[PyTorch](pytorch_ipynb/cyclical-learning-rate.ipynb)]
