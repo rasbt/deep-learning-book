@@ -95,6 +95,7 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - A simple single-layer RNN (IMDB) [[PyTorch](pytorch_ipynb/rnn_simple_imdb.ipynb)]
 - A simple single-layer RNN with packed sequences to ignore padding characters (IMDB) [[PyTorch](pytorch_ipynb/rnn_simple_packed_imdb.ipynb)]
 - An RNN with LSTM cells (IMDB) [[PyTorch](pytorch_ipynb/rnn_lstm_packed_imdb.ipynb)]
+- An RNN with LSTM cells and Own Dataset in CSV Format (IMDB) [[PyTorch](pytorch_ipynb/rnn_lstm_packed_own_csv_imdb.ipynb)]
 - An RNN with GRU cells (IMDB) [[PyTorch](pytorch_ipynb/rnn_gru_packed_imdb.ipynb)]
 - A multilayer bi-directional RNN (IMDB) [[PyTorch](pytorch_ipynb/rnn_gru_packed_imdb.ipynb)]
 
@@ -118,6 +119,9 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 - [Pinned Memory](pytorch_ipynb/convnet-resnet34-cifar10-pinmem.ipynb)
 - [Standardizing Images](pytorch_ipynb/convnet-standardized.ipynb)
 - [Image Transformation Examples](pytorch_ipynb/torchvision-transform-examples.ipynb)
+- [Char-RNN with Own Text File](pytorch_ipynb/rnn_lstm_bi_imdb.ipynb)
+- [Sentiment Classification RNN with Own CSV File](pytorch_ipynb/rnn_lstm_packed_own_csv_imdb.ipynb)
+
 
 **Parallel Computing**
 
