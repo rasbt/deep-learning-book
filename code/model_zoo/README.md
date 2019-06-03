@@ -105,9 +105,9 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 ## Ordinal Regression
 
-- Ordinal Regression CNN -- CORAL [[PyTorch](pytorch_ipynb/ordinal-cnn-coral.ipynb)]
-- Ordinal Regression CNN -- Niu et al. [[PyTorch](pytorch_ipynb/ordinal-cnn-niu.ipynb)]
-
+- Ordinal Regression CNN -- CORAL w. ResNet34 on AFAD-Lite [[PyTorch](pytorch_ipynb/ordinal-cnn-coral-afadlite.ipynb)]
+- Ordinal Regression CNN -- Niu et al. 2016 w. ResNet34 on AFAD-Lite [[PyTorch](pytorch_ipynb/ordinal-cnn-niu-afadlite.ipynb)]
+- Ordinal Regression CNN -- Beckham and Pal 2016 w. ResNet34 on AFAD-Lite [[PyTorch](pytorch_ipynb/ordinal-cnn-niu-afadlite.ipynb)]
 
 
 ## Tips and Tricks
