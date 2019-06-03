@@ -103,6 +103,12 @@ A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks.
 
 - A simple character RNN to generate new text (Charles Dickens) [[PyTorch](pytorch_ipynb/rnn_lstm_bi_imdb.ipynb)]
 
+## Ordinal Regression
+
+- Ordinal Regression CNN -- CORAL [[PyTorch](pytorch_ipynb/ordinal-cnn-coral.ipynb)]
+- Ordinal Regression CNN -- Niu et al. [[PyTorch](pytorch_ipynb/ordinal-cnn-niu.ipynb)]
+
+
 
 ## Tips and Tricks
 
