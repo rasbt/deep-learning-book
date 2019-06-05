@@ -81,7 +81,9 @@ Paperback: est. 2018
 
 #### Model Zoo
 
-- **[Model Zoo: A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks](code/model_zoo)**
+- **[Model Zoo: A collection of standalone TensorFlow and PyTorch models in Jupyter Notebooks](https://github.com/rasbt/deeplearning-models)**
+
+  
 
 ---
 
